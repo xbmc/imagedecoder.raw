@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<addon
+  id="imagedecoder.raw"
+  version="1.0.0"
+  name="libraw image decoder"
+  provider-name="spiff">
+  <requires>
+    <c-pluff version="0.1"/>
+  </requires>
+  <extension
+    point="kodi.imagedecoder"
+    library_@PLATFORM@="@LIBRARY_FILENAME@"
+    extension=".cr2|.nef|.arw"
+    mimetype="image/cr2|image/nef|image/arw"/>
+  <extension point="xbmc.addon.metadata">
+    <summary>libraw based image decoder</summary>
+    <description>libraw based image decoder</description>
+    <platform>@PLATFORM@</platform>
+  </extension>
+</addon>
