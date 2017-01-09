@@ -185,16 +185,6 @@ bool Decode(void* image, unsigned char* pixels, unsigned int width,
   return raw->Decode(pixels, width, height, pitch, format);
 }
 
-bool CreateThumbnail(unsigned char* bufferin,
-                     unsigned int width,
-                     unsigned int height,
-                     unsigned int pitch,
-                     unsigned int format,
-                     const char* destFile)
-{
-  return false;
-}
-
 void Close(void* image)
 {
   delete static_cast<RawPicture*>(image);
