@@ -5,7 +5,7 @@
   name="libraw image decoder"
   provider-name="spiff">
   <requires>
-    <c-pluff version="0.1"/>
+    <import addon="kodi.imagedecoder" version="1.0.0"/>
   </requires>
   <extension
     point="kodi.imagedecoder"

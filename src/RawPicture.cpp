@@ -18,7 +18,7 @@
  *
  */
 
-#include "kodi_imageenc_dll.h"
+#include "kodi_imagedec_dll.h"
 #include "TextureFormats.h"
 #include <libraw.h>
 
