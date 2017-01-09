@@ -1,0 +1,21 @@
+Source: kodi-imagedecoder-raw
+Priority: extra
+Maintainer: Arne Morten Kvarving <cptspiff@gmail.com>
+Build-Depends: debhelper (>= 8.0.0), cmake,
+               kodi-addon-dev, kodi-image-dev, libraw-dev
+Standards-Version: 3.9.2
+Section: libs
+
+Package: kodi-imagedecoder-raw
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: RAW image decoder for Kodi
+  RAW image decoder for Kodi
+
+Package: kodi-imagedecoder-raw-dbg
+Section: debug
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: debug symbols for RAW image decoder for Kodi
+  debug symbols for RAW image decoder for Kodi
