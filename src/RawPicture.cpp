@@ -19,7 +19,6 @@
  */
 
 #include "kodi_imagedec_dll.h"
-#include "TextureFormats.h"
 #include <libraw.h>
 
 class RawPicture
@@ -91,12 +90,12 @@ public:
     {
       unsigned char *dst2 = dst;
       unsigned char *src2 = src;
-      for (unsigned int x = 0; x < m_width; x++, dst2 += (format==XB_FMT_RGB8?3:4), src2 -= 3)
+      for (unsigned int x = 0; x < m_width; x++, dst2 += (format==ADDON_IMG_FMT_RGB8?3:4), src2 -= 3)
       {
         dst2[0] = src2[2];
         dst2[1] = src2[1];
         dst2[2] = src2[0];
-        if (format == XB_FMT_A8R8G8B8)
+        if (format == ADDON_IMG_FMT_A8R8G8B8)
           dst2[3] = 0xff;
       }
       src -= srcPitch;
