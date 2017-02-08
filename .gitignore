@@ -1,0 +1,23 @@
+# build artifacts
+build/
+debian/changelog
+debian/files
+debian/kodi-imagedecoder-raw-dbg.debhelper.log
+debian/kodi-imagedecoder-raw-dbg.substvars
+debian/kodi-imagedecoder-raw-dbg/
+debian/kodi-imagedecoder-raw.debhelper.log
+debian/kodi-imagedecoder-raw.postinst.debhelper
+debian/kodi-imagedecoder-raw.postrm.debhelper
+debian/kodi-imagedecoder-raw.substvars
+debian/kodi-imagedecoder-raw/
+debian/tmp/
+obj-x86_64-linux-gnu/
+imagedecoder.raw/addon.xml
+
+# clion
+.idea/
+
+# Eclipse/CDT
+.cproject
+.project
+.settings/
