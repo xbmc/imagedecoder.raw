@@ -1,0 +1,10 @@
+--- a/internal/libraw_x3f.cpp
++++ b/internal/libraw_x3f.cpp
+@@ -1401,7 +1401,7 @@
+   x3f_image_data_t *ID = &DEH->data_subsection.image_data;
+   x3f_huffman_t *HUF = ID->huffman;
+ 
+-  int16_t c[3] = {offset,offset,offset};
++  int16_t c[3] = {static_cast<int16_t>(offset),static_cast<int16_t>(offset),static_cast<int16_t>(offset)};
+   int col;
+   bit_state_t BS;
