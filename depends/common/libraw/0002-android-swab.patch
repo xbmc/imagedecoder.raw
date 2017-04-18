@@ -1,0 +1,65 @@
+--- a/internal/dcraw_common.cpp
++++ b/internal/dcraw_common.cpp
+@@ -20,6 +20,9 @@
+ 
+ 
+ #include <math.h>
++#if defined(TARGET_ANDROID) || defined(ANDROID)
++#include "internal/swab.h"
++#endif
+ #define CLASS LibRaw::
+ #include "libraw/libraw_types.h"
+ #define LIBRAW_LIBRARY_BUILD
+--- /dev/null
++++ b/internal/swab.cpp
+@@ -0,0 +1,20 @@
++#if defined(TARGET_ANDROID) || defined(ANDROID)
++
++#include "internal/swab.h"
++
++#include <stdint.h>
++
++void swab(const void *p_src, void *p_dst, ssize_t n)
++{
++  if (n < 0)
++    return;
++
++  for (ssize_t i = 0; i < n - 1; i += 2)
++  {
++    uint8_t tmp = static_cast<const uint8_t*>(p_src)[i + 0];
++    static_cast<uint8_t*>(p_dst)[i + 0] = static_cast<const uint8_t*>(p_src)[i + 1];
++    static_cast<uint8_t*>(p_dst)[i + 1] = tmp;
++  }
++}
++
++#endif
+--- /dev/null
++++ b/internal/swab.h
+@@ -0,0 +1,5 @@
++#pragma once
++
++#include <sys/types.h>
++
++void swab(const void *p_src_, void *p_dst_, ssize_t n);
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -31,6 +31,7 @@
+ lib_libraw_a_SOURCES = internal/dcraw_common.cpp \
+ 				 internal/dcraw_fileio.cpp \
+ 				 internal/demosaic_packs.cpp \
++				 internal/swab.cpp \
+ 				 src/libraw_cxx.cpp \
+ 				 src/libraw_datastream.cpp \
+ 				 src/libraw_c_api.cpp 
+--- a/src/libraw_cxx.cpp
++++ b/src/libraw_cxx.cpp
+@@ -35,6 +35,9 @@
+ #include <zlib.h>
+ #endif
+ 
++#if defined(TARGET_ANDROID) || defined(ANDROID)
++#include "internal/swab.h"
++#endif
+
+ #ifdef USE_RAWSPEED
+ #include "../RawSpeed/rawspeed_xmldata.cpp"
