@@ -19,7 +19,11 @@
  */
 
 #include "kodi_imagedec_dll.h"
+
 #include <libraw.h>
+#if defined(TARGET_WINDOWS) && defined(LoadImage)
+#undef LoadImage
+#endif
 
 class RawPicture
 {

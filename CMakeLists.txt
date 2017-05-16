@@ -14,6 +14,10 @@ include_directories(${KODI_INCLUDE_DIR}
 
 set(RAW_SOURCES src/RawPicture.cpp)
 
+if(WIN32)
+  add_definitions(-DLIBRAW_NODLL)
+endif()
+
 set(DEPLIBS ${RAW_LIBRARIES})
 
 build_addon(imagedecoder.raw RAW DEPLIBS)
