@@ -2,7 +2,7 @@ Source: kodi-imagedecoder-raw
 Priority: extra
 Maintainer: Arne Morten Kvarving <cptspiff@gmail.com>
 Build-Depends: debhelper (>= 8.0.0), cmake,
-               kodi-addon-dev, kodi-image-dev, libraw-dev
+               kodi-addon-dev, libraw-dev
 Standards-Version: 3.9.2
 Section: libs
 
