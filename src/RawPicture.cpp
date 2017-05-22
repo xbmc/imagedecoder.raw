@@ -125,10 +125,6 @@ ADDON_STATUS ADDON_Create(void* hdl, void* props)
   return ADDON_STATUS_OK;
 }
 
-void ADDON_Stop()
-{
-}
-
 void ADDON_Destroy()
 {
 }
