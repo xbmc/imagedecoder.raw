@@ -9,7 +9,7 @@ enable_language(CXX)
 find_package(Kodi REQUIRED)
 find_package(RAW REQUIRED)
 
-include_directories(${KODI_INCLUDE_DIR}
+include_directories(${KODI_INCLUDE_DIR}/.. # Hack way with "/..", need bigger Kodi cmake rework to match right include ways (becomes done in future)
                     ${RAW_INCLUDE_DIRS})
 
 set(RAW_SOURCES src/RawPicture.cpp)

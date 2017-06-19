@@ -18,20 +18,16 @@
  *
  */
 
-#include "kodi_imagedec_dll.h"
-
+#include <kodi/addon-instance/ImageDecoder.h>
 #include <libraw.h>
-#if defined(TARGET_WINDOWS) && defined(LoadImage)
-#undef LoadImage
-#endif
 
-class RawPicture
+class RawPicture : public kodi::addon::CInstanceImageDecoder
 {
 public:
-  RawPicture()
+  RawPicture(KODI_HANDLE instance)
+    : CInstanceImageDecoder(instance),
+      m_raw_data(libraw_init(0))
   {
-    m_raw_data =  libraw_init(0);
-    m_thumbnailbuffer = nullptr;
   }
 
   virtual ~RawPicture()
@@ -39,43 +35,40 @@ public:
     libraw_close(m_raw_data);
   }
 
-  virtual bool LoadImageFromMemory(unsigned char* buffer, unsigned int bufSize, unsigned int width, unsigned int height)
+  virtual bool LoadImageFromMemory(unsigned char* buffer, unsigned int bufSize, unsigned int& width, unsigned int& height) override
   {
-    if (m_raw_data == NULL)
+    if (m_raw_data == nullptr)
       return false;
 
-    if(libraw_open_buffer(m_raw_data, buffer, bufSize) != LIBRAW_SUCCESS)
+    if (libraw_open_buffer(m_raw_data, buffer, bufSize) != LIBRAW_SUCCESS)
     {
-      //CLog::Log(LOGERROR, "Texture manager unable to load image from memory");
+      kodi::Log(ADDON_LOG_ERROR, "Texture manager unable to load image from memory (libraw_open_buffer)");
       return false;
     }
     int err = 0;
     if ( (err = libraw_unpack(m_raw_data)) != LIBRAW_SUCCESS)
     {
-      //CLog::Log(LOGERROR, "Texture manager unable to load image from memory");
+      kodi::Log(ADDON_LOG_ERROR, "Texture manager unable to load image from memory (libraw_unpack)");
       return false;
     }
 
     if ( (err = libraw_dcraw_process(m_raw_data)) != LIBRAW_SUCCESS)
     {
-      //CLog::Log(LOGERROR, "Texture manager unable to load image from memory");
+      kodi::Log(ADDON_LOG_ERROR, "Texture manager unable to load image from memory (libraw_dcraw_process)");
       return false;
     }
+
     m_width = m_raw_data->sizes.width;
     m_height = m_raw_data->sizes.height;
 
-    if ( (err = libraw_unpack_thumb(m_raw_data)) != LIBRAW_SUCCESS)
-    {
-      //CLog::Log(LOGERROR, "Texture manager unable to load image from memory");
-      return false;
-    }
-
+    width = m_width;
+    height = m_height;
     return true;
   }
 
-  virtual bool Decode(unsigned char *pixels, 
+  virtual bool Decode(unsigned char *pixels,
                       unsigned int width, unsigned int height,
-                      unsigned int pitch, unsigned int format)
+                      unsigned int pitch, ImageFormat format) override
   {
     if (!m_raw_data || m_raw_data->sizes.width == 0 || m_raw_data->sizes.height == 0)
       return false;
@@ -110,65 +103,21 @@ public:
     return true;
   }
 
+private:
+  libraw_data_t* m_raw_data;
   unsigned int m_width;
   unsigned int m_height;
-private:
-  libraw_data_t*  m_raw_data;
-  std::string m_strMimeType;
-  unsigned char* m_thumbnailbuffer;
 };
 
-extern "C"
+class CMyAddon : public kodi::addon::CAddonBase
 {
-ADDON_STATUS ADDON_Create(void* hdl, void* props)
-{
-  return ADDON_STATUS_OK;
-}
-
-void ADDON_Destroy()
-{
-}
-
-ADDON_STATUS ADDON_GetStatus()
-{
-  return ADDON_STATUS_OK;
-}
-
-ADDON_STATUS ADDON_SetSetting(const char *strSetting, const void *value)
-{
-  return ADDON_STATUS_OK;
-}
-
-void* LoadImage(unsigned char* buffer, unsigned int bufSize,
-                unsigned int* width, unsigned int* height)
-{
-  RawPicture* result = new RawPicture;
-
-  if (result->LoadImageFromMemory(buffer, bufSize, *width, *height))
+public:
+  CMyAddon() { }
+  virtual ADDON_STATUS CreateInstance(int instanceType, std::string instanceID, KODI_HANDLE instance, KODI_HANDLE& addonInstance) override
   {
-    *width = result->m_width;
-    *height = result->m_height;
-    return result;
+    addonInstance = new RawPicture(instance);
+    return ADDON_STATUS_OK;
   }
+};
 
-  delete result;
-
-  return NULL;
-}
-
-bool Decode(void* image, unsigned char* pixels, unsigned int width,
-            unsigned int height, unsigned int pitch, unsigned int format)
-{
-  if (!image)
-    return false;
-  RawPicture* raw = static_cast<RawPicture*>(image);
-
-  return raw->Decode(pixels, width, height, pitch, format);
-}
-
-void Close(void* image)
-{
-  delete static_cast<RawPicture*>(image);
-}
-
-}
+ADDONCREATOR(CMyAddon)
