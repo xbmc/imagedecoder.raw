@@ -2,10 +2,6 @@ cmake_minimum_required(VERSION 3.2)
 
 project(libraw VERSION 0.18.0 LANGUAGES CXX)
 
-if(MSVC)
-  set(CMAKE_DEBUG_POSTFIX d)
-endif()
-
 add_library(${PROJECT_NAME}
   src/libraw_c_api.cpp
   src/libraw_cxx.cpp
@@ -34,6 +30,7 @@ target_include_directories(${PROJECT_NAME}
 
 target_compile_definitions(${PROJECT_NAME}
   PRIVATE
+  _CRT_NONSTDC_NO_DEPRECATE
   _CRT_SECURE_NO_WARNINGS
   _CRT_STDC_NO_DEPRECATE
   _USRDLL
