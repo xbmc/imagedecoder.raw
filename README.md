@@ -2,8 +2,8 @@
 
 This is a [Kodi](http://kodi.tv) image decoder addon for RAW images.
 
-[![Build Status](https://travis-ci.org/notspiff/imagedecoder.raw.svg?branch=master)](https://travis-ci.org/notspiff/imagedecoder.raw)
-[![Build Status](https://ci.appveyor.com/api/projects/status/github/notspiff/imagedecoder.raw?svg=true)](https://ci.appveyor.com/project/notspiff/imagedecoder-raw)
+[![Build Status](https://travis-ci.org/xbmc/imagedecoder.raw.svg?branch=master)](https://travis-ci.org/xbmc/imagedecoder.raw)
+[![Build Status](https://ci.appveyor.com/api/projects/status/github/xbmc/imagedecoder.raw?svg=true)](https://ci.appveyor.com/project/xbmc/imagedecoder-raw)
 
 ## Build instructions
 
@@ -17,7 +17,7 @@ The following instructions assume you will have built Kodi already in the `kodi-
 suggested by the README.
 
 1. `git clone https://github.com/xbmc/xbmc.git`
-2. `git clone https://github.com/notspiff/imagedecoder.raw.git`
+2. `git clone https://github.com/xbmc/imagedecoder.raw.git`
 3. `cd imagedecoder.raw && mkdir build && cd build`
 4. `cmake -DADDONS_TO_BUILD=imagedecoder.raw -DADDON_SRC_PREFIX=../.. -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=../../xbmc/kodi-build/addons -DPACKAGE_ZIP=1 ../../xbmc/cmake/addons`
 5. `make`
