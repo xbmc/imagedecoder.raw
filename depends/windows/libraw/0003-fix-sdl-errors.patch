@@ -1,76 +1,57 @@
 --- a/internal/dcraw_common.cpp
 +++ b/internal/dcraw_common.cpp
-@@ -1431,7 +1431,7 @@
+@@ -1710,7 +1710,7 @@
    int i, nz;
    char tail[424];
  
--  fseek (ifp, -sizeof tail, SEEK_END);
-+  fseek (ifp, 0u -sizeof tail, SEEK_END);
-   fread (tail, 1, sizeof tail, ifp);
-   for (nz=i=0; i < sizeof tail; i++)
-     if (tail[i]) nz++;
-@@ -7359,13 +7359,13 @@ void CLASS parse_makernote_0xc634(int base, int uptag, unsigned dng_writer)
+-  fseek(ifp, -sizeof tail, SEEK_END);
++  fseek(ifp, 0u -sizeof tail, SEEK_END);
+   fread(tail, 1, sizeof tail, ifp);
+   for (nz = i = 0; i < sizeof tail; i++)
+     if (tail[i])
+@@ -9273,11 +9273,11 @@
    unsigned lenNikonLensData = 0;
    unsigned NikonFlashInfoVersion = 0;
  
 -  uchar *CanonCameraInfo;
 +  uchar *CanonCameraInfo = nullptr;
    unsigned lenCanonCameraInfo = 0;
+   unsigned typeCanonCameraInfo = 0;
  
 -  uchar *table_buf;
--  uchar *table_buf_0x9050;
 +  uchar *table_buf = nullptr;
-+  uchar *table_buf_0x9050 = nullptr;
-   ushort table_buf_0x9050_present = 0;
--  uchar *table_buf_0x940c;
-+  uchar *table_buf_0x940c = nullptr;
-   ushort table_buf_0x940c_present = 0;
- 
-   short morder, sorder = order;
-@@ -8166,13 +8166,13 @@
+   uchar *table_buf_0x0116;
+   ushort table_buf_0x0116_len = 0;
+   uchar *table_buf_0x2010;
+@@ -10111,11 +10111,11 @@
  
    unsigned NikonFlashInfoVersion = 0;
  
 -  uchar *CanonCameraInfo;
 +  uchar *CanonCameraInfo = nullptr;
    unsigned lenCanonCameraInfo = 0;
+   unsigned typeCanonCameraInfo = 0;
  
 -  uchar *table_buf;
--  uchar *table_buf_0x9050;
 +  uchar *table_buf = nullptr;
-+  uchar *table_buf_0x9050 = nullptr;
-   ushort table_buf_0x9050_present = 0;
--  uchar *table_buf_0x940c;
-+  uchar *table_buf_0x940c = nullptr;
-   ushort table_buf_0x940c_present = 0;
- 
-   INT64 fsize = ifp->size();
-@@ -11199,7 +11199,7 @@
+   uchar *table_buf_0x0116;
+   ushort table_buf_0x0116_len = 0;
+   uchar *table_buf_0x2010;
+@@ -14047,7 +14047,7 @@
  #else
-     if( !ifp->tempbuffer_open(buf,sony_length))
-         {
--            parse_tiff_ifd(-sony_offset);
-+            parse_tiff_ifd(0u -sony_offset);
-             ifp->tempbuffer_close();
-         }
+     if (!ifp->tempbuffer_open(buf, sony_length))
+     {
+-      parse_tiff_ifd(-sony_offset);
++      parse_tiff_ifd(0u -sony_offset);
+       ifp->tempbuffer_close();
+     }
  #endif
-@@ -12299,7 +12299,7 @@ void CLASS parse_redcine()
-   width  = get4();
+@@ -15594,7 +15594,7 @@
+   width = get4();
    height = get4();
-   fseek (ifp, 0, SEEK_END);
--  fseek (ifp, -(i = ftello(ifp) & 511), SEEK_CUR);
-+  fseek (ifp, 0u -(i = ftello(ifp) & 511), SEEK_CUR);
-   if (get4() != i || get4() != 0x52454f42) {
+   fseek(ifp, 0, SEEK_END);
+-  fseek(ifp, -(i = ftello(ifp) & 511), SEEK_CUR);
++  fseek(ifp, 0u -(i = ftello(ifp) & 511), SEEK_CUR);
+   if (get4() != i || get4() != 0x52454f42)
+   {
  #ifdef DCRAW_VERBOSE
-     fprintf (stderr,_("%s: Tail is missing, parsing from head...\n"), ifname);
---- a/internal/wf_filtering.cpp
-+++ b/internal/wf_filtering.cpp
-@@ -832,7 +832,7 @@
- 
- 	line_filtered = (long int*) calloc(S.width, sizeof(*line_filtered));
- 	
--	ushort *src, *src_c, *src_u1, *src_u2, *src_d1, *src_d2, *dst_c, *src_ca, *dst_ca, *dst_rb; 
-+	ushort *src = nullptr, *src_c = nullptr, *src_u1 = nullptr, *src_u2 = nullptr, *src_d1 = nullptr, *src_d2 = nullptr, *dst_c = nullptr, *src_ca, *dst_ca, *dst_rb = nullptr;
- 	int start_col, start_col_left, row_up, row_dn;
- 
- 	if ( green_mode != WF_GREENMODE_IND)

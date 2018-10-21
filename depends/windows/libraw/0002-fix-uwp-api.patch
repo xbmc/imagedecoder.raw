@@ -1,8 +1,6 @@
-diff --git a/src/libraw_datastream.cpp b/src/libraw_datastream.cpp
-index 4b13744..34b9ae9 100644
 --- a/src/libraw_datastream.cpp
 +++ b/src/libraw_datastream.cpp
-@@ -644,6 +644,27 @@ int LibRaw_bigfile_datastream::jpeg_src(void *jpegdata)
+@@ -687,6 +687,27 @@
  // == LibRaw_windows_datastream
  #ifdef WIN32
  
@@ -27,9 +25,6 @@ index 4b13744..34b9ae9 100644
 +}
 +#endif
 +
- LibRaw_windows_datastream::LibRaw_windows_datastream(const TCHAR* sFile)
-     : LibRaw_buffer_datastream(NULL, 0)
-     , hMap_(0)
--- 
-2.13.2.windows.1
-
+ LibRaw_windows_datastream::LibRaw_windows_datastream(const TCHAR *sFile)
+     : LibRaw_buffer_datastream(NULL, 0), hMap_(0), pView_(NULL)
+ {
