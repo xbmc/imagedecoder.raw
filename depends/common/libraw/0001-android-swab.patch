@@ -53,13 +53,14 @@
  				 src/libraw_c_api.cpp 
 --- a/src/libraw_cxx.cpp
 +++ b/src/libraw_cxx.cpp
-@@ -35,6 +35,9 @@
+@@ -35,6 +35,10 @@
  #include <zlib.h>
  #endif
  
 +#if defined(TARGET_ANDROID) || defined(ANDROID)
 +#include "internal/swab.h"
 +#endif
-
++
  #ifdef USE_RAWSPEED
  #include "../RawSpeed/rawspeed_xmldata.cpp"
+ #include <RawSpeed/StdAfx.h>

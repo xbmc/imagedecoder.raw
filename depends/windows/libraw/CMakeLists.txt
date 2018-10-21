@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.2)
 
-project(libraw VERSION 0.18.0 LANGUAGES CXX)
+project(libraw VERSION 0.19.0 LANGUAGES CXX)
 
 add_library(${PROJECT_NAME}
   src/libraw_c_api.cpp
