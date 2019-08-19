@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.2)
+cmake_minimum_required(VERSION 3.5)
 
 project(libraw VERSION 0.19.0 LANGUAGES CXX)
 
