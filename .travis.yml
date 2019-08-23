@@ -22,16 +22,17 @@ matrix:
       sudo: required
       compiler: clang
     - os: osx
-      osx_image: xcode9
+      osx_image: xcode9.4
 
 #
 # Some of the OS X images don't have cmake, contrary to what people
 # on the Internet say
 #
 before_install:
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get -qq update && sudo apt-get install -y nasm; fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then which cmake || brew update        ; fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then which cmake || brew install cmake ; fi
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update && brew upgrade cmake || true; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update && brew install nasm ; fi
 
 #
 # The addon source is automatically checked out in $TRAVIS_BUILD_DIR,
