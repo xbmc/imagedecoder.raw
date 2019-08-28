@@ -21,7 +21,7 @@
 #include <kodi/addon-instance/ImageDecoder.h>
 #include <libraw.h>
 
-class RawPicture : public kodi::addon::CInstanceImageDecoder
+class ATTRIBUTE_HIDDEN RawPicture : public kodi::addon::CInstanceImageDecoder
 {
 public:
   RawPicture(KODI_HANDLE instance)
@@ -109,7 +109,7 @@ private:
   unsigned int m_height;
 };
 
-class CMyAddon : public kodi::addon::CAddonBase
+class ATTRIBUTE_HIDDEN CMyAddon : public kodi::addon::CAddonBase
 {
 public:
   CMyAddon() { }

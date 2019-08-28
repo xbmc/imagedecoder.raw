@@ -1,12 +1,10 @@
+cmake_minimum_required(VERSION 3.5)
 project(imagedecoder.raw)
-
-cmake_minimum_required(VERSION 2.6)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR})
 
-enable_language(CXX)
-
 find_package(Kodi REQUIRED)
+find_package(Jpeg REQUIRED)
 find_package(RAW REQUIRED)
 
 include_directories(${KODI_INCLUDE_DIR}/.. # Hack way with "/..", need bigger Kodi cmake rework to match right include ways (becomes done in future)
@@ -18,7 +16,8 @@ if(WIN32)
   add_definitions(-DLIBRAW_NODLL)
 endif()
 
-set(DEPLIBS ${RAW_LIBRARIES})
+set(DEPLIBS ${RAW_LIBRARIES}
+            ${JPEG_LIBRARIES})
 
 build_addon(imagedecoder.raw RAW DEPLIBS)
 
