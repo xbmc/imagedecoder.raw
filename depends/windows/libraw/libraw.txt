@@ -1,1 +1,1 @@
-libraw http://mirrors.kodi.tv/build-deps/sources/LibRaw-0.19.0.tar.gz
+libraw https://github.com/LibRaw/LibRaw/archive/0.19.5.tar.gz
