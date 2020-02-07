@@ -18,12 +18,12 @@ public:
   {
   }
 
-  virtual ~RawPicture()
+  ~RawPicture() override
   {
     libraw_close(m_raw_data);
   }
 
-  virtual bool LoadImageFromMemory(unsigned char* buffer, unsigned int bufSize, unsigned int& width, unsigned int& height) override
+  bool LoadImageFromMemory(unsigned char* buffer, unsigned int bufSize, unsigned int& width, unsigned int& height) override
   {
     if (m_raw_data == nullptr)
       return false;
@@ -54,9 +54,9 @@ public:
     return true;
   }
 
-  virtual bool Decode(unsigned char *pixels,
-                      unsigned int width, unsigned int height,
-                      unsigned int pitch, ImageFormat format) override
+  bool Decode(unsigned char *pixels,
+              unsigned int width, unsigned int height,
+              unsigned int pitch, ImageFormat format) override
   {
     if (!m_raw_data || m_raw_data->sizes.width == 0 || m_raw_data->sizes.height == 0)
       return false;
@@ -100,8 +100,8 @@ private:
 class ATTRIBUTE_HIDDEN CMyAddon : public kodi::addon::CAddonBase
 {
 public:
-  CMyAddon() { }
-  virtual ADDON_STATUS CreateInstance(int instanceType, std::string instanceID, KODI_HANDLE instance, KODI_HANDLE& addonInstance) override
+  CMyAddon() = default;
+  ADDON_STATUS CreateInstance(int instanceType, std::string instanceID, KODI_HANDLE instance, KODI_HANDLE& addonInstance) override
   {
     addonInstance = new RawPicture(instance);
     return ADDON_STATUS_OK;
