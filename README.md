@@ -3,7 +3,8 @@
 This is a [Kodi](http://kodi.tv) image decoder addon for RAW images.
 
 [![Build Status](https://travis-ci.org/xbmc/imagedecoder.raw.svg?branch=master)](https://travis-ci.org/xbmc/imagedecoder.raw)
-[![Build Status](https://ci.appveyor.com/api/projects/status/github/xbmc/imagedecoder.raw?svg=true)](https://ci.appveyor.com/project/xbmc/imagedecoder-raw)
+[![Build Status](https://dev.azure.com/teamkodi/binary-addons/_apis/build/status/xbmc.imagedecoder.raw?branchName=Leia)](https://dev.azure.com/teamkodi/binary-addons/_build/latest?definitionId=28&branchName=Leia)
+<!--- [![Build Status](https://ci.appveyor.com/api/projects/status/github/xbmc/imagedecoder.raw?svg=true)](https://ci.appveyor.com/project/xbmc/imagedecoder-raw) -->
 
 ## Build instructions
 
