@@ -11,8 +11,8 @@
     extension=".3fr|.arw|.cr2|.crw|.dcr|.dng|.erf|.kdc|.mdc|.mef|.mos|.mrw|.nef|.nrw|.orf|.pef|.ppm|.raf|.raw|.rw2|.srw|.x3f"
     mimetype="image/3fr|image/arw|image/cr2|image/crw|image/dcr|image/dng|image/erf|image/kdc|image/mdc|image/mef|image/mos|image/mrw|image/nef|image/nrw|image/orf|image/pef|image/x-portable-pixmap|image/raf|image/raw|image/rw2|image/srw|image/x3f"/>
   <extension point="xbmc.addon.metadata">
-    <summary>libraw based image decoder</summary>
-    <description>libraw based image decoder</description>
+    <summary>Reading of RAW digicam images</summary>
+    <description>Addon based on LibRaw for reading RAW files obtained from digital photo cameras (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR and others; virtually all RAW formats are supported).</description>
     <platform>@PLATFORM@</platform>
     <license>GPL-2.0+</license>
     <source>https://github.com/xbmc/imagedecoder.raw</source>
