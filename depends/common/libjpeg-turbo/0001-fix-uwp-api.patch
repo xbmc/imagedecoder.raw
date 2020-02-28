@@ -1,0 +1,33 @@
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -313,6 +313,9 @@
+     endforeach()
+   endif()
+   set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /W3 /wd4996")
++  if(CMAKE_SYSTEM_NAME STREQUAL WindowsStore)
++    set(NO_GETENV 1)
++  endif()
+ endif()
+ 
+ if(CMAKE_COMPILER_IS_GNUCC OR CMAKE_C_COMPILER_ID STREQUAL "Clang")
+--- a/tjutil.c
++++ b/tjutil.c
+@@ -46,7 +46,7 @@
+   LARGE_INTEGER t;
+ 
+   if (f < 0.0) f = getFreq();
+-  if (f == 0.0) return (double)GetTickCount() / 1000.;
++  if (f == 0.0) return (double)GetTickCount64() / 1000.;
+   else {
+     QueryPerformanceCounter(&t);
+     return (double)t.QuadPart / f;
+--- a/win/jconfig.h.in
++++ b/win/jconfig.h.in
+@@ -6,6 +6,7 @@
+ #cmakedefine D_ARITH_CODING_SUPPORTED
+ #cmakedefine MEM_SRCDST_SUPPORTED
+ #cmakedefine WITH_SIMD
++#cmakedefine NO_GETENV
+ 
+ #define BITS_IN_JSAMPLE  @BITS_IN_JSAMPLE@      /* use 8 or 12 */
+ 
