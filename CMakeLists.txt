@@ -4,7 +4,7 @@ project(imagedecoder.raw)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR})
 
 find_package(Kodi REQUIRED)
-find_package(Jpeg REQUIRED)
+find_package(JPEG REQUIRED)
 find_package(LCMS2 REQUIRED)
 find_package(RAW REQUIRED)
 
