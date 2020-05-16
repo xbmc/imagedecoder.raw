@@ -1,0 +1,57 @@
+--- a/internal/dcraw_common.cpp
++++ b/internal/dcraw_common.cpp
+@@ -1710,7 +1710,7 @@
+   int i, nz;
+   char tail[424];
+ 
+-  fseek(ifp, -sizeof tail, SEEK_END);
++  fseek(ifp, 0u -sizeof tail, SEEK_END);
+   fread(tail, 1, sizeof tail, ifp);
+   for (nz = i = 0; i < sizeof tail; i++)
+     if (tail[i])
+@@ -9273,11 +9273,11 @@
+   unsigned lenNikonLensData = 0;
+   unsigned NikonFlashInfoVersion = 0;
+ 
+-  uchar *CanonCameraInfo;
++  uchar *CanonCameraInfo = nullptr;
+   unsigned lenCanonCameraInfo = 0;
+   unsigned typeCanonCameraInfo = 0;
+ 
+-  uchar *table_buf;
++  uchar *table_buf = nullptr;
+   uchar *table_buf_0x0116;
+   ushort table_buf_0x0116_len = 0;
+   uchar *table_buf_0x2010;
+@@ -10111,11 +10111,11 @@
+ 
+   unsigned NikonFlashInfoVersion = 0;
+ 
+-  uchar *CanonCameraInfo;
++  uchar *CanonCameraInfo = nullptr;
+   unsigned lenCanonCameraInfo = 0;
+   unsigned typeCanonCameraInfo = 0;
+ 
+-  uchar *table_buf;
++  uchar *table_buf = nullptr;
+   uchar *table_buf_0x0116;
+   ushort table_buf_0x0116_len = 0;
+   uchar *table_buf_0x2010;
+@@ -14047,7 +14047,7 @@
+ #else
+     if (!ifp->tempbuffer_open(buf, sony_length))
+     {
+-      parse_tiff_ifd(-sony_offset);
++      parse_tiff_ifd(0u -sony_offset);
+       ifp->tempbuffer_close();
+     }
+ #endif
+@@ -15594,7 +15594,7 @@
+   width = get4();
+   height = get4();
+   fseek(ifp, 0, SEEK_END);
+-  fseek(ifp, -(i = ftello(ifp) & 511), SEEK_CUR);
++  fseek(ifp, 0u -(i = ftello(ifp) & 511), SEEK_CUR);
+   if (get4() != i || get4() != 0x52454f42)
+   {
+ #ifdef DCRAW_VERBOSE
