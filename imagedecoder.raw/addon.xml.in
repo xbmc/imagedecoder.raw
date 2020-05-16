@@ -14,7 +14,7 @@
     <summary>Reading of RAW digicam images</summary>
     <description>Addon based on LibRaw for reading RAW files obtained from digital photo cameras (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR and others; virtually all RAW formats are supported).</description>
     <platform>@PLATFORM@</platform>
-    <license>GPL-2.0+</license>
+    <license>GPL-2.0-or-later</license>
     <source>https://github.com/xbmc/imagedecoder.raw</source>
     <assets>
       <icon>icon.png</icon>

@@ -2,7 +2,7 @@
 
 This is a [Kodi](https://kodi.tv) image decoder addon for RAW images.
 
-[![License: GPL v2+](https://img.shields.io/badge/License-GPL%20v2+-blue.svg)](LICENSE.md)
+[![License: GPL-2.0-or-later](https://img.shields.io/badge/License-GPL%20v2+-blue.svg)](LICENSE.md)
 [![Build Status](https://travis-ci.org/xbmc/imagedecoder.raw.svg?branch=Leia)](https://travis-ci.org/xbmc/imagedecoder.raw/branches)
 [![Build Status](https://dev.azure.com/teamkodi/binary-addons/_apis/build/status/xbmc.imagedecoder.raw?branchName=Leia)](https://dev.azure.com/teamkodi/binary-addons/_build/latest?definitionId=28&branchName=Leia)
 [![Build Status](https://jenkins.kodi.tv/view/Addons/job/xbmc/job/imagedecoder.raw/job/Leia/badge/icon)](https://jenkins.kodi.tv/blue/organizations/jenkins/xbmc%2Fimagedecoder.raw/branches/)
