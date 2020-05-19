@@ -12,8 +12,8 @@
 class ATTRIBUTE_HIDDEN RawPicture : public kodi::addon::CInstanceImageDecoder
 {
 public:
-  RawPicture(KODI_HANDLE instance)
-    : CInstanceImageDecoder(instance),
+  RawPicture(KODI_HANDLE instance, const std::string& version)
+    : CInstanceImageDecoder(instance, version),
       m_raw_data(libraw_init(0))
   {
   }
@@ -101,9 +101,9 @@ class ATTRIBUTE_HIDDEN CMyAddon : public kodi::addon::CAddonBase
 {
 public:
   CMyAddon() = default;
-  ADDON_STATUS CreateInstance(int instanceType, std::string instanceID, KODI_HANDLE instance, KODI_HANDLE& addonInstance) override
+  ADDON_STATUS CreateInstance(int instanceType, const std::string& instanceID, KODI_HANDLE instance, const std::string& version, KODI_HANDLE& addonInstance) override
   {
-    addonInstance = new RawPicture(instance);
+    addonInstance = new RawPicture(instance, version);
     return ADDON_STATUS_OK;
   }
 };
