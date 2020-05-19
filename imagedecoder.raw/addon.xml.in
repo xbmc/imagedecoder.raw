@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="imagedecoder.raw"
-  version="2.1.1"
+  version="2.1.2"
   name="libraw image decoder"
   provider-name="spiff">
   <requires>@ADDON_DEPENDS@</requires>
