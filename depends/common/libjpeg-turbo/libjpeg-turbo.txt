@@ -1,1 +1,1 @@
-libjpeg-turbo http://mirrors.kodi.tv/build-deps/sources/libjpeg-turbo-2.0.4.tar.gz
+libjpeg-turbo https://github.com/libjpeg-turbo/libjpeg-turbo/archive/refs/tags/2.1.1.tar.gz

@@ -1,6 +1,6 @@
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -595,18 +595,6 @@
+@@ -648,18 +648,6 @@
        set_target_properties(turbojpeg PROPERTIES
          LINK_FLAGS "${TJMAPFLAG}${TJMAPFILE}")
      endif()
@@ -19,7 +19,7 @@
    endif()
  
    if(ENABLE_STATIC)
-@@ -618,16 +606,6 @@
+@@ -671,16 +659,6 @@
      if(NOT MSVC)
        set_target_properties(turbojpeg-static PROPERTIES OUTPUT_NAME turbojpeg)
      endif()
@@ -36,7 +36,7 @@
    endif()
  endif()
  
-@@ -642,26 +620,6 @@
+@@ -695,26 +673,6 @@
    set(DJPEG_BMP_SOURCES wrbmp.c wrtarga.c)
  endif()
  
@@ -63,7 +63,7 @@
  
  ###############################################################################
  # TESTS
-@@ -1359,8 +1317,6 @@
+@@ -1467,8 +1425,6 @@
        else()
          set(DIR ${CMAKE_CURRENT_BINARY_DIR})
        endif()
@@ -72,7 +72,7 @@
      endif()
    endif()
    install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/turbojpeg.h
-@@ -1375,17 +1331,9 @@
+@@ -1485,17 +1441,9 @@
      else()
        set(DIR ${CMAKE_CURRENT_BINARY_DIR})
      endif()
@@ -90,7 +90,7 @@
  install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/README.ijg
    ${CMAKE_CURRENT_SOURCE_DIR}/README.md ${CMAKE_CURRENT_SOURCE_DIR}/example.txt
    ${CMAKE_CURRENT_SOURCE_DIR}/tjexample.c
-@@ -1398,13 +1346,6 @@
+@@ -1508,13 +1456,6 @@
      DESTINATION ${CMAKE_INSTALL_DOCDIR})
  endif()
  
