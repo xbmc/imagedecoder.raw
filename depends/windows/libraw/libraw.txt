@@ -1,1 +1,1 @@
-libraw https://github.com/LibRaw/LibRaw/archive/0.19.5.tar.gz
+libraw https://github.com/LibRaw/LibRaw/archive/refs/tags/0.20.2.tar.gz
