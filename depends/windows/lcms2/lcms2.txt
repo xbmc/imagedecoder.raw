@@ -1,1 +1,1 @@
-lcms2 https://github.com/mm2/Little-CMS/archive/lcms2.9.tar.gz
+lcms2 https://github.com/mm2/Little-CMS/releases/download/lcms2.12/lcms2-2.12.tar.gz
