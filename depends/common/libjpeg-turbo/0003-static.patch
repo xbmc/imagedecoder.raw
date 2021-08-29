@@ -1,6 +1,6 @@
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -555,10 +555,10 @@
+@@ -608,10 +608,10 @@
  endif()
  
  if(ENABLE_STATIC)
@@ -13,7 +13,7 @@
    endif()
  endif()
  
-@@ -598,13 +598,13 @@
+@@ -651,13 +651,13 @@
    endif()
  
    if(ENABLE_STATIC)
@@ -30,22 +30,21 @@
      endif()
    endif()
  endif()
-@@ -1309,7 +1309,7 @@
+@@ -1416,7 +1416,7 @@ if(WITH_TURBOJPEG)
      endif()
    endif()
    if(ENABLE_STATIC)
--    install(TARGETS turbojpeg-static ARCHIVE
-+    install(TARGETS turbojpeg ARCHIVE
-       DESTINATION ${CMAKE_INSTALL_LIBDIR})
+-    install(TARGETS turbojpeg-static EXPORT ${CMAKE_PROJECT_NAME}Targets
++    install(TARGETS turbojpeg EXPORT ${CMAKE_PROJECT_NAME}Targets
+       INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
+       ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR})
      if(NOT ENABLE_SHARED)
-       if(MSVC_IDE OR XCODE)
-@@ -1324,7 +1324,7 @@
+@@ -1432,7 +1432,7 @@
  endif()
  
  if(ENABLE_STATIC)
--  install(TARGETS jpeg-static ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR})
-+  install(TARGETS jpeg ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR})
+-  install(TARGETS jpeg-static EXPORT ${CMAKE_PROJECT_NAME}Targets
++  install(TARGETS jpeg EXPORT ${CMAKE_PROJECT_NAME}Targets
+     INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
+     ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR})
    if(NOT ENABLE_SHARED)
-     if(MSVC_IDE OR XCODE)
-       set(DIR "${CMAKE_CURRENT_BINARY_DIR}/\${CMAKE_INSTALL_CONFIG_NAME}")
-

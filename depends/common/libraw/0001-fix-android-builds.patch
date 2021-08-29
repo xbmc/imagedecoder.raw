@@ -1,0 +1,111 @@
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -64,7 +64,7 @@
+ 	src/tables/wblists.cpp src/utils/curves.cpp \
+ 	src/utils/decoder_info.cpp src/utils/init_close_utils.cpp \
+ 	src/utils/open.cpp src/utils/phaseone_processing.cpp \
+-	src/utils/read_utils.cpp src/utils/thumb_utils.cpp \
++	src/utils/read_utils.cpp src/utils/swab.cpp src/utils/thumb_utils.cpp \
+ 	src/utils/utils_dcraw.cpp src/utils/utils_libraw.cpp \
+ 	src/write/apply_profile.cpp src/write/file_write.cpp \
+ 	src/write/tiff_writer.cpp src/x3f/x3f_parse_process.cpp \
+--- a/internal/dcraw_common.cpp
++++ b/internal/dcraw_common.cpp
+@@ -21,6 +21,7 @@
+ #include "../src/utils/read_utils.cpp"
+ #include "../src/utils/curves.cpp"
+ #include "../src/utils/utils_dcraw.cpp"
++#include "../src/utils/swab.cpp"
+ 
+ #include "../src/tables/colordata.cpp"
+ 
+--- a/internal/defines.h
++++ b/internal/defines.h
+@@ -189,4 +189,8 @@
+ #define BAYERC(row, col, c)                                                    \
+   imgdata.image[((row) >> IO.shrink) * S.iwidth + ((col) >> IO.shrink)][c]
+ 
++#if defined(__ANDROID__)
++  void swab(const void *p_src, void *p_dst, ssize_t n);
++#endif
++
+ #endif
+--- a/libraw/libraw_datastream.h
++++ b/libraw/libraw_datastream.h
+@@ -43,6 +43,10 @@
+ #endif
+ #endif
+ 
++#if defined(__ANDROID__) && __ANDROID_API__ < 24
++#define _LIBCPP_HAS_NO_OFF_T_FUNCTIONS
++#endif
++
+ #include "libraw_const.h"
+ #include "libraw_types.h"
+ #include <fstream>
+--- a/src/libraw_cxx.cpp
++++ b/src/libraw_cxx.cpp
+@@ -37,6 +37,7 @@
+ #include "utils/decoder_info.cpp"
+ #include "utils/open.cpp"
+ #include "utils/phaseone_processing.cpp"
++#include "utils/swab.cpp"
+ #include "utils/thumb_utils.cpp"
+ 
+ #include "write/tiff_writer.cpp"
+--- a/src/libraw_datastream.cpp
++++ b/src/libraw_datastream.cpp
+@@ -588,6 +588,8 @@
+ #else
+   return fseek(f, (long)o, whence);
+ #endif
++#elif __ANDROID__ && __ANDROID_API__ < 24
++  return fseek(f, (long)o, whence);
+ #else
+   return fseeko(f, o, whence);
+ #endif
+@@ -602,6 +604,8 @@
+ #else
+   return ftell(f);
+ #endif
++#elif __ANDROID__ && __ANDROID_API__ < 24
++  return ftell(f);
+ #else
+   return ftello(f);
+ #endif
+--- /dev/null
++++ b/src/utils/swab.cpp
+@@ -0,0 +1,33 @@
++/* -*- C++ -*-
++ * Copyright 2019-2020 LibRaw LLC (info@libraw.org)
++ *
++
++ LibRaw is free software; you can redistribute it and/or modify
++ it under the terms of the one of two licenses as you choose:
++
++1. GNU LESSER GENERAL PUBLIC LICENSE version 2.1
++   (See file LICENSE.LGPL provided in LibRaw distribution archive for details).
++
++2. COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0
++   (See file LICENSE.CDDL provided in LibRaw distribution archive for details).
++
++ */
++
++#if defined(__ANDROID__)
++
++#include "../../internal/dcraw_defs.h"
++
++void swab(const void *p_src, void *p_dst, ssize_t n)
++{
++  if (n < 0)
++    return;
++
++  for (ssize_t i = 0; i < n - 1; i += 2)
++  {
++    uint8_t tmp = static_cast<const uint8_t*>(p_src)[i + 0];
++    static_cast<uint8_t*>(p_dst)[i + 0] = static_cast<const uint8_t*>(p_src)[i + 1];
++    static_cast<uint8_t*>(p_dst)[i + 1] = tmp;
++  }
++}
++
++#endif
