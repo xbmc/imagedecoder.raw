@@ -7,9 +7,98 @@
   <requires>@ADDON_DEPENDS@</requires>
   <extension
     point="kodi.imagedecoder"
-    library_@PLATFORM@="@LIBRARY_FILENAME@"
-    extension=".3fr|.arw|.cr2|.crw|.dcr|.dng|.erf|.kdc|.mdc|.mef|.mos|.mrw|.nef|.nrw|.orf|.pef|.ppm|.raf|.raw|.rw2|.srw|.x3f"
-    mimetype="image/3fr|image/arw|image/cr2|image/crw|image/dcr|image/dng|image/erf|image/kdc|image/mdc|image/mef|image/mos|image/mrw|image/nef|image/nrw|image/orf|image/pef|image/x-portable-pixmap|image/raf|image/raw|image/rw2|image/srw|image/x3f"/>
+    library_@PLATFORM@="@LIBRARY_FILENAME@">
+    <support>
+      <mimetype name="image/3fr">
+        <extension>.3fr</extension>
+        <description>30100</description>
+      </mimetype>
+      <mimetype name="image/arw">
+        <extension>.arw</extension>
+        <description>30101</description>
+      </mimetype>
+      <mimetype name="image/cr2">
+        <extension>.cr2</extension>
+        <description>30102</description>
+      </mimetype>
+      <mimetype name="image/crw">
+        <extension>.crw</extension>
+        <description>30103</description>
+      </mimetype>
+      <mimetype name="image/dcr">
+        <extension>.dcr</extension>
+        <description>30104</description>
+      </mimetype>
+      <mimetype name="image/dng">
+        <extension>.dng</extension>
+        <description>30105</description>
+      </mimetype>
+      <mimetype name="image/erf">
+        <extension>.erf</extension>
+        <description>30106</description>
+      </mimetype>
+      <mimetype name="image/kdc">
+        <extension>.kdc</extension>
+        <description>30107</description>
+      </mimetype>
+      <mimetype name="image/mdc">
+        <extension>.mdc</extension>
+        <description>30108</description>
+      </mimetype>
+      <mimetype name="image/mef">
+        <extension>.mef</extension>
+        <description>30109</description>
+      </mimetype>
+      <mimetype name="image/mos">
+        <extension>.mos</extension>
+        <description>30110</description>
+      </mimetype>
+      <mimetype name="image/mrw">
+        <extension>.mrw</extension>
+        <description>30111</description>
+      </mimetype>
+      <mimetype name="image/nef">
+        <extension>.nef</extension>
+        <description>30112</description>
+      </mimetype>
+      <mimetype name="image/nrw">
+        <extension>.nrw</extension>
+        <description>30113</description>
+      </mimetype>
+      <mimetype name="image/orf">
+        <extension>.orf</extension>
+        <description>30114</description>
+      </mimetype>
+      <mimetype name="image/pef">
+        <extension>.pef</extension>
+        <description>30115</description>
+      </mimetype>
+      <mimetype name="image/x-portable-pixmap">
+        <extension>.ppm</extension>
+        <description>30116</description>
+      </mimetype>
+      <mimetype name="image/raf">
+        <extension>.raf</extension>
+        <description>30117</description>
+      </mimetype>
+      <mimetype name="image/raw">
+        <extension>.raw</extension>
+        <description>30118</description>
+      </mimetype>
+      <mimetype name="image/rw2">
+        <extension>.rw2</extension>
+        <description>30119</description>
+      </mimetype>
+      <mimetype name="image/srw">
+        <extension>.srw</extension>
+        <description>30120</description>
+      </mimetype>
+      <mimetype name="image/x3f">
+        <extension>.x3f</extension>
+        <description>30121</description>
+      </mimetype>
+    </support>
+  </extension>
   <extension point="xbmc.addon.metadata">
     <platform>@PLATFORM@</platform>
     <license>GPL-2.0-or-later</license>
