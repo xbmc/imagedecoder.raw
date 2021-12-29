@@ -10,8 +10,8 @@
 
 #include <kodi/Filesystem.h>
 
-RawPicture::RawPicture(KODI_HANDLE instance, const std::string& version)
-  : CInstanceImageDecoder(instance, version), m_raw_data(libraw_init(0))
+RawPicture::RawPicture(const kodi::addon::IInstanceInfo& instance)
+  : CInstanceImageDecoder(instance), m_raw_data(libraw_init(0))
 {
 }
 
@@ -218,13 +218,10 @@ class ATTR_DLL_LOCAL CMyAddon : public kodi::addon::CAddonBase
 {
 public:
   CMyAddon() = default;
-  ADDON_STATUS CreateInstance(int instanceType,
-                              const std::string& instanceID,
-                              KODI_HANDLE instance,
-                              const std::string& version,
-                              KODI_HANDLE& addonInstance) override
+  ADDON_STATUS CreateInstance(const kodi::addon::IInstanceInfo& instance,
+                              KODI_ADDON_INSTANCE_HDL& hdl) override
   {
-    addonInstance = new RawPicture(instance, version);
+    hdl = new RawPicture(instance);
     return ADDON_STATUS_OK;
   }
 };

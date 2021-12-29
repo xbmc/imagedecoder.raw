@@ -13,7 +13,7 @@
 class ATTR_DLL_LOCAL RawPicture : public kodi::addon::CInstanceImageDecoder
 {
 public:
-  RawPicture(KODI_HANDLE instance, const std::string& version);
+  RawPicture(const kodi::addon::IInstanceInfo& instance);
   ~RawPicture() override;
 
   bool SupportsFile(const std::string& file) override;
