@@ -1,15 +1,104 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="imagedecoder.raw"
-  version="20.0.0"
+  version="20.1.0"
   name="libraw image decoder"
   provider-name="spiff">
   <requires>@ADDON_DEPENDS@</requires>
   <extension
     point="kodi.imagedecoder"
-    library_@PLATFORM@="@LIBRARY_FILENAME@"
-    extension=".3fr|.arw|.cr2|.crw|.dcr|.dng|.erf|.kdc|.mdc|.mef|.mos|.mrw|.nef|.nrw|.orf|.pef|.ppm|.raf|.raw|.rw2|.srw|.x3f"
-    mimetype="image/3fr|image/arw|image/cr2|image/crw|image/dcr|image/dng|image/erf|image/kdc|image/mdc|image/mef|image/mos|image/mrw|image/nef|image/nrw|image/orf|image/pef|image/x-portable-pixmap|image/raf|image/raw|image/rw2|image/srw|image/x3f"/>
+    library_@PLATFORM@="@LIBRARY_FILENAME@">
+    <support>
+      <mimetype name="image/3fr">
+        <extension>.3fr</extension>
+        <description>30100</description>
+      </mimetype>
+      <mimetype name="image/arw">
+        <extension>.arw</extension>
+        <description>30101</description>
+      </mimetype>
+      <mimetype name="image/cr2">
+        <extension>.cr2</extension>
+        <description>30102</description>
+      </mimetype>
+      <mimetype name="image/crw">
+        <extension>.crw</extension>
+        <description>30103</description>
+      </mimetype>
+      <mimetype name="image/dcr">
+        <extension>.dcr</extension>
+        <description>30104</description>
+      </mimetype>
+      <mimetype name="image/dng">
+        <extension>.dng</extension>
+        <description>30105</description>
+      </mimetype>
+      <mimetype name="image/erf">
+        <extension>.erf</extension>
+        <description>30106</description>
+      </mimetype>
+      <mimetype name="image/kdc">
+        <extension>.kdc</extension>
+        <description>30107</description>
+      </mimetype>
+      <mimetype name="image/mdc">
+        <extension>.mdc</extension>
+        <description>30108</description>
+      </mimetype>
+      <mimetype name="image/mef">
+        <extension>.mef</extension>
+        <description>30109</description>
+      </mimetype>
+      <mimetype name="image/mos">
+        <extension>.mos</extension>
+        <description>30110</description>
+      </mimetype>
+      <mimetype name="image/mrw">
+        <extension>.mrw</extension>
+        <description>30111</description>
+      </mimetype>
+      <mimetype name="image/nef">
+        <extension>.nef</extension>
+        <description>30112</description>
+      </mimetype>
+      <mimetype name="image/nrw">
+        <extension>.nrw</extension>
+        <description>30113</description>
+      </mimetype>
+      <mimetype name="image/orf">
+        <extension>.orf</extension>
+        <description>30114</description>
+      </mimetype>
+      <mimetype name="image/pef">
+        <extension>.pef</extension>
+        <description>30115</description>
+      </mimetype>
+      <mimetype name="image/x-portable-pixmap">
+        <extension>.ppm</extension>
+        <description>30116</description>
+      </mimetype>
+      <mimetype name="image/raf">
+        <extension>.raf</extension>
+        <description>30117</description>
+      </mimetype>
+      <mimetype name="image/raw">
+        <extension>.raw</extension>
+        <description>30118</description>
+      </mimetype>
+      <mimetype name="image/rw2">
+        <extension>.rw2</extension>
+        <description>30119</description>
+      </mimetype>
+      <mimetype name="image/srw">
+        <extension>.srw</extension>
+        <description>30120</description>
+      </mimetype>
+      <mimetype name="image/x3f">
+        <extension>.x3f</extension>
+        <description>30121</description>
+      </mimetype>
+    </support>
+  </extension>
   <extension point="xbmc.addon.metadata">
     <platform>@PLATFORM@</platform>
     <license>GPL-2.0-or-later</license>
@@ -17,9 +106,23 @@
     <assets>
       <icon>icon.png</icon>
     </assets>
-    <summary lang="de_DE">Lesen von RAW-Digicam Bildern</summary>
+    <summary lang="da_DK">Læsning af RAW digicam-billeder</summary>
+    <summary lang="de_DE">Lesen von RAW-Bildern von Digitalkameras</summary>
     <summary lang="en_GB">Reading of RAW digicam images</summary>
-    <description lang="de_DE">Addon basierend auf LibRaw zum Lesen von Dateien im Rohdatenformat der digitalen Fotokameras (CRW / CR2, NEF, RAF, DNG, MOS, KDC, DCR und andere; praktisch alle RAW-Formate werden unterstützt).</description>
+    <summary lang="es_MX">Lectura de imágenes digicam RAW</summary>
+    <summary lang="ko_KR">RAW 디지털 카메라 이미지 읽기</summary>
+    <summary lang="pl_PL">Odczytywanie obrazów cyfrowych RAW</summary>
+    <summary lang="ru_RU">Чтение цифровых изображений в формате RAW</summary>
+    <summary lang="tr_TR">RAW dijital kamera resimlerinin okunması</summary>
+    <summary lang="zh_CN">读取 RAW 数字图像</summary>
+    <description lang="da_DK">Addon baseret på LibRaw til læsning af RAW-filer hentet fra digitale kameraer (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR og andre; stort set alle RAW-formater understøttes).</description>
+    <description lang="de_DE">Addon zum Lesen von Dateien im Rohdatenformat digitaler Fotokameras, basierend auf LibRaw (CRW / CR2, NEF, RAF, DNG, MOS, KDC, DCR und andere. Praktisch alle RAW-Formate werden unterstützt).</description>
     <description lang="en_GB">Addon based on LibRaw for reading RAW files obtained from digital photo cameras (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR and others; virtually all RAW formats are supported).</description>
+    <description lang="es_MX">Complemento basado en LibRaw para leer archivos RAW obtenidos de cámaras de fotografía digitales (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR y otros; virtualmente todos los formatos RAW están soportados).</description>
+    <description lang="ko_KR">디지털 사진 카메라에서 얻은 RAW 파일을 읽기 위한 LibRaw 기반 애드온 (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR 등, 거의 모든 RAW 형식이 지원됨).</description>
+    <description lang="pl_PL">Dodatek oparty na LibRaw do odczytu plików RAW uzyskanych z cyfrowych aparatów fotograficznych (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR i innych; obsługiwane są praktycznie wszystkie formaty RAW).</description>
+    <description lang="ru_RU">Дополнение на основе LibRaw для чтения RAW-файлов, полученных с цифровых фотокамер (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR и другие; поддерживаются практически все RAW-форматы).</description>
+    <description lang="tr_TR">Dijital fotoğraf kameralarından (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR ve diğerleri; neredeyse tüm RAW formatları desteklenir) elde edilen RAW dosyalarını okumak için LibRaw tabanlı eklenti.</description>
+    <description lang="zh_CN">基于 LibRaw 的插件，用于读取从数码相机获取的 RAW 文件（CRW/CR2、NEF、RAF、DNG、MOS、KDC、DCR等；几乎支持所有 RAW 格式）。</description>
   </extension>
 </addon>

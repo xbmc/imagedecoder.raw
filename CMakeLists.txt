@@ -14,6 +14,8 @@ include_directories(${KODI_INCLUDE_DIR}/.. # Hack way with "/..", need bigger Ko
 
 set(RAW_SOURCES src/RawPicture.cpp)
 
+set(RAW_HEADERS src/RawPicture.h)
+
 if(WIN32)
   add_definitions(-DLIBRAW_NODLL)
 endif()
