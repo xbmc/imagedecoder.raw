@@ -1,0 +1,84 @@
+--- a/src/metadata/cr3_parser.cpp
++++ b/src/metadata/cr3_parser.cpp
+@@ -298,7 +298,7 @@ int LibRaw::parseCR3(unsigned long long oAtomList,
+         AtomType = 1;
+       }
+       else
+-        fseek(ifp, -lHdr, SEEK_CUR);
++        fseek(ifp, 0u -lHdr, SEEK_CUR);
+     }
+     else if (!strcmp(AtomNameStack, "moovuuidCCTP"))
+     {
+--- a/src/metadata/makernotes.cpp
++++ b/src/metadata/makernotes.cpp
+@@ -96,7 +96,7 @@ void LibRaw::parse_makernote_0xc634(int base, int uptag, unsigned dng_writer)
+ 
+   unsigned entries, tag, type, len, save, c;
+ 
+-  uchar *CanonCameraInfo;
++  uchar *CanonCameraInfo = nullptr;
+   unsigned lenCanonCameraInfo = 0;
+   unsigned typeCanonCameraInfo = 0;
+ 
+@@ -420,7 +420,7 @@ void LibRaw::parse_makernote(int base, int uptag)
+   unsigned i, wb[4] = {0, 0, 0, 0};
+   short morder, sorder = order;
+ 
+-  uchar *CanonCameraInfo;
++  uchar *CanonCameraInfo = nullptr;
+   unsigned lenCanonCameraInfo = 0;
+   unsigned typeCanonCameraInfo = 0;
+   imCanon.wbi = 0;
+--- a/src/metadata/misc_parsers.cpp
++++ b/src/metadata/misc_parsers.cpp
+@@ -71,7 +71,7 @@ int LibRaw::minolta_z2()
+   int i, nz;
+   char tail[424];
+ 
+-  fseek(ifp, -sizeof tail, SEEK_END);
++  fseek(ifp, 0u -sizeof tail, SEEK_END);
+   fread(tail, 1, sizeof tail, ifp);
+   for (nz = i = 0; i < int(sizeof tail); i++)
+     if (tail[i])
+@@ -102,7 +102,7 @@ void LibRaw::parse_redcine()
+   width = get4();
+   height = get4();
+   fseek(ifp, 0, SEEK_END);
+-  fseek(ifp, -(i = ftello(ifp) & 511), SEEK_CUR);
++  fseek(ifp, 0u -(i = ftello(ifp) & 511), SEEK_CUR);
+   if (get4() != i || get4() != 0x52454f42)
+   {
+     fseek(ifp, 0, SEEK_SET);
+--- a/src/metadata/nikon.cpp
++++ b/src/metadata/nikon.cpp
+@@ -238,7 +238,7 @@ void LibRaw::parseNikonMakernote(int base, int uptag, unsigned dng_writer)
+   unsigned offset = 0, entries, tag, type, len, save;
+ 
+   unsigned c, i;
+-  uchar *LensData_buf;
++  uchar *LensData_buf = nullptr;
+   uchar ColorBalanceData_buf[324];
+   int ColorBalanceData_ready = 0;
+   uchar ci, cj, ck;
+--- a/src/metadata/pentax.cpp
++++ b/src/metadata/pentax.cpp
+@@ -133,7 +133,7 @@ void LibRaw::PentaxISO(ushort c)
+ void LibRaw::PentaxLensInfo(unsigned long long id, unsigned len) // tag 0x0207
+ {
+   ushort iLensData = 0;
+-  uchar *table_buf;
++  uchar *table_buf = nullptr;
+   table_buf = (uchar *)malloc(MAX(len, 128));
+   fread(table_buf, len, 1, ifp);
+   if ((id < PentaxID_K100D) ||
+--- a/src/metadata/sony.cpp
++++ b/src/metadata/sony.cpp
+@@ -982,7 +982,7 @@ void LibRaw::parseSonyMakernotes(
+ {
+ 
+   ushort lid, a, c, d;
+-  uchar *table_buf;
++  uchar *table_buf = nullptr;
+   uchar uc;
+   uchar s[2];
+   int LensDataValid = 0;
