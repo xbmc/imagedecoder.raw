@@ -29,6 +29,7 @@
     <summary lang="nb_NO">Lesing av RAW digicam-bilder</summary>
     <summary lang="pl_PL">Odczytywanie obrazów cyfrowych RAW</summary>
     <summary lang="pt_BR">Leitura de imagens RAW de câmeras digitais</summary>
+    <summary lang="pt_PT">Leitura de imagens digitais RAW</summary>
     <summary lang="ru_RU">Чтение цифровых изображений в формате RAW</summary>
     <summary lang="tr_TR">RAW dijital kamera resimlerinin okunması</summary>
     <summary lang="zh_CN">读取 RAW 数字图像</summary>
@@ -44,6 +45,7 @@
     <description lang="nb_NO">Utvidelse basert på LibRaw for lesing av RAW-filer hentet fra digitalkameraer (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR og andre; stort sett alle RAW-formater støttes).</description>
     <description lang="pl_PL">Dodatek oparty na LibRaw do odczytu plików RAW uzyskanych z cyfrowych aparatów fotograficznych (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR i innych; obsługiwane są praktycznie wszystkie formaty RAW).</description>
     <description lang="pt_BR">Add-on baseado na biblioteca LibRaw para leitura de arquivos RAW provenientes de câmeras fotográficas digitais (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR e outros; praticamente todos os formatos RAW são suportados).</description>
+    <description lang="pt_PT">Add-on baseado na biblioteca LibRaw para leitura de ficheiros RAW obtidos de câmaras digitais (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR e outros; praticamente todos os formatos RAW são suportados).</description>
     <description lang="ru_RU">Дополнение на основе LibRaw для чтения RAW-файлов, полученных с цифровых фотокамер (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR и другие; поддерживаются практически все RAW-форматы).</description>
     <description lang="tr_TR">Dijital fotoğraf kameralarından (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR ve diğerleri; neredeyse tüm RAW formatları desteklenir) elde edilen RAW dosyalarını okumak için LibRaw tabanlı eklenti.</description>
     <description lang="zh_CN">基于 LibRaw 的插件，用于读取从数码相机获取的 RAW 文件（CRW/CR2、NEF、RAF、DNG、MOS、KDC、DCR等；几乎支持所有 RAW 格式）。</description>
