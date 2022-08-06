@@ -1,6 +1,6 @@
 --- a/src/decoders/crx.cpp
 +++ b/src/decoders/crx.cpp
-@@ -347,7 +347,7 @@
+@@ -347,7 +347,7 @@ libraw_inline void crxDecodeSymbolL1(CrxBandParam *param,
                (bitCode << param->kParam);
  
    // add converted (+/-) error code to predicted value
@@ -9,7 +9,7 @@
  
    // for not end of the line - use one symbol ahead to estimate next K
    if (notEOL)
-@@ -456,7 +456,7 @@
+@@ -456,7 +456,7 @@ libraw_inline void crxDecodeSymbolL1Rounded(CrxBandParam *param,
    else if (param->kParam)
      bitCode = crxBitstreamGetBits(&param->bitStream, param->kParam) |
                (bitCode << param->kParam);
@@ -18,7 +18,7 @@
    param->lineBuf1[1] = param->roundedBitsMask * 2 * code + (code >> 31) + sym;
  
    if (doCode)
-@@ -576,7 +576,7 @@
+@@ -576,7 +576,7 @@ int crxDecodeLineNoRefPrevLine(CrxBandParam *param)
        else if (param->kParam)
          bitCode = crxBitstreamGetBits(&param->bitStream, param->kParam) |
                    (bitCode << param->kParam);
@@ -27,7 +27,7 @@
        param->kParam = crxPredictKParameter(param->kParam, bitCode);
        if (param->lineBuf2[i + 1] - param->kParam <= 1)
        {
-@@ -638,7 +638,7 @@
+@@ -638,7 +638,7 @@ int crxDecodeLineNoRefPrevLine(CrxBandParam *param)
            else if (param->kParam)
              bitCode = crxBitstreamGetBits(&param->bitStream, param->kParam) |
                        (bitCode << param->kParam);
@@ -36,7 +36,7 @@
            param->kParam = crxPredictKParameter(param->kParam, bitCode, 15);
            param->lineBuf2[i] = param->kParam;
          }
-@@ -652,7 +652,7 @@
+@@ -652,7 +652,7 @@ int crxDecodeLineNoRefPrevLine(CrxBandParam *param)
          else if (param->kParam)
            bitCode = crxBitstreamGetBits(&param->bitStream, param->kParam) |
                      (bitCode << param->kParam);
@@ -45,7 +45,7 @@
          param->kParam = crxPredictKParameter(param->kParam, bitCode);
          if (param->lineBuf2[i + 1] - param->kParam <= 1)
          {
-@@ -743,7 +743,7 @@
+@@ -743,7 +743,7 @@ int crxDecodeTopLine(CrxBandParam *param)
      else if (param->kParam)
        bitCode = crxBitstreamGetBits(&param->bitStream, param->kParam) |
                  (bitCode << param->kParam);
@@ -54,7 +54,7 @@
      param->kParam = crxPredictKParameter(param->kParam, bitCode, 15);
      ++param->lineBuf1;
    }
-@@ -757,7 +757,7 @@
+@@ -757,7 +757,7 @@ int crxDecodeTopLine(CrxBandParam *param)
      else if (param->kParam)
        bitCode = crxBitstreamGetBits(&param->bitStream, param->kParam) |
                  (bitCode << param->kParam);
@@ -63,7 +63,7 @@
      param->kParam = crxPredictKParameter(param->kParam, bitCode, 15);
      ++param->lineBuf1;
    }
-@@ -830,7 +830,7 @@
+@@ -830,7 +830,7 @@ int crxDecodeTopLineRounded(CrxBandParam *param)
        bitCode = crxBitstreamGetBits(&param->bitStream, param->kParam) |
                  (bitCode << param->kParam);
  
@@ -72,7 +72,7 @@
      param->lineBuf1[1] += param->roundedBitsMask * 2 * sVal + (sVal >> 31);
      param->kParam = crxPredictKParameter(param->kParam, bitCode, 15);
      ++param->lineBuf1;
-@@ -844,7 +844,7 @@
+@@ -844,7 +844,7 @@ int crxDecodeTopLineRounded(CrxBandParam *param)
      else if (param->kParam)
        bitCode = crxBitstreamGetBits(&param->bitStream, param->kParam) |
                  (bitCode << param->kParam);
@@ -81,7 +81,7 @@
      param->lineBuf1[1] += param->roundedBitsMask * 2 * sVal + (sVal >> 31);
      param->kParam = crxPredictKParameter(param->kParam, bitCode, 15);
      ++param->lineBuf1;
-@@ -870,7 +870,7 @@
+@@ -870,7 +870,7 @@ int crxDecodeTopLineNoRefPrevLine(CrxBandParam *param)
        else if (param->kParam)
          bitCode = crxBitstreamGetBits(&param->bitStream, param->kParam) |
                    (bitCode << param->kParam);
@@ -90,7 +90,7 @@
        param->kParam = crxPredictKParameter(param->kParam, bitCode, 15);
      }
      else
-@@ -922,7 +922,7 @@
+@@ -922,7 +922,7 @@ int crxDecodeTopLineNoRefPrevLine(CrxBandParam *param)
        else if (param->kParam)
          bitCode = crxBitstreamGetBits(&param->bitStream, param->kParam) |
                    (bitCode << param->kParam);
@@ -99,7 +99,7 @@
        param->kParam = crxPredictKParameter(param->kParam, bitCode, 15);
      }
      param->lineBuf2[0] = param->kParam;
-@@ -938,7 +938,7 @@
+@@ -938,7 +938,7 @@ int crxDecodeTopLineNoRefPrevLine(CrxBandParam *param)
      else if (param->kParam)
        bitCode = crxBitstreamGetBits(&param->bitStream, param->kParam) |
                  (bitCode << param->kParam);
@@ -108,7 +108,7 @@
      param->kParam = crxPredictKParameter(param->kParam, bitCode, 15);
      param->lineBuf2[0] = param->kParam;
      ++param->lineBuf1;
-@@ -1085,7 +1085,7 @@
+@@ -1085,7 +1085,7 @@ int crxDecodeLineWithIQuantization(CrxSubband *subband)
            (bitCode << subband->paramK);
  
      subband->quantValue +=
@@ -117,87 +117,3 @@
      subband->paramK = crxPredictKParameter(subband->paramK, bitCode);
      if (subband->paramK > 7)
        return -1;
---- a/src/metadata/cr3_parser.cpp
-+++ b/src/metadata/cr3_parser.cpp
-@@ -298,7 +298,7 @@
-         AtomType = 1;
-       }
-       else
--        fseek(ifp, -lHdr, SEEK_CUR);
-+        fseek(ifp, 0u -lHdr, SEEK_CUR);
-     }
-     else if (!strcmp(AtomNameStack, "moovuuidCCTP"))
-     {
---- a/src/metadata/makernotes.cpp
-+++ b/src/metadata/makernotes.cpp
-@@ -96,7 +96,7 @@
- 
-   unsigned entries, tag, type, len, save, c;
- 
--  uchar *CanonCameraInfo;
-+  uchar *CanonCameraInfo = nullptr;
-   unsigned lenCanonCameraInfo = 0;
-   unsigned typeCanonCameraInfo = 0;
- 
-@@ -420,7 +420,7 @@
-   unsigned i, wb[4] = {0, 0, 0, 0};
-   short morder, sorder = order;
- 
--  uchar *CanonCameraInfo;
-+  uchar *CanonCameraInfo = nullptr;
-   unsigned lenCanonCameraInfo = 0;
-   unsigned typeCanonCameraInfo = 0;
-   imCanon.wbi = 0;
---- a/src/metadata/misc_parsers.cpp
-+++ b/src/metadata/misc_parsers.cpp
-@@ -71,7 +71,7 @@
-   int i, nz;
-   char tail[424];
- 
--  fseek(ifp, -sizeof tail, SEEK_END);
-+  fseek(ifp, 0u -sizeof tail, SEEK_END);
-   fread(tail, 1, sizeof tail, ifp);
-   for (nz = i = 0; i < int(sizeof tail); i++)
-     if (tail[i])
-@@ -102,7 +102,7 @@
-   width = get4();
-   height = get4();
-   fseek(ifp, 0, SEEK_END);
--  fseek(ifp, -(i = ftello(ifp) & 511), SEEK_CUR);
-+  fseek(ifp, 0u -(i = ftello(ifp) & 511), SEEK_CUR);
-   if (get4() != i || get4() != 0x52454f42)
-   {
-     fseek(ifp, 0, SEEK_SET);
---- a/src/metadata/nikon.cpp
-+++ b/src/metadata/nikon.cpp
-@@ -238,7 +238,7 @@
-   unsigned offset = 0, entries, tag, type, len, save;
- 
-   unsigned c, i;
--  uchar *LensData_buf;
-+  uchar *LensData_buf = nullptr;
-   uchar ColorBalanceData_buf[324];
-   int ColorBalanceData_ready = 0;
-   uchar ci, cj, ck;
---- a/src/metadata/pentax.cpp
-+++ b/src/metadata/pentax.cpp
-@@ -133,7 +133,7 @@
- void LibRaw::PentaxLensInfo(unsigned long long id, unsigned len) // tag 0x0207
- {
-   ushort iLensData = 0;
--  uchar *table_buf;
-+  uchar *table_buf = nullptr;
-   table_buf = (uchar *)malloc(MAX(len, 128));
-   fread(table_buf, len, 1, ifp);
-   if ((id < PentaxID_K100D) ||
---- a/src/metadata/sony.cpp
-+++ b/src/metadata/sony.cpp
-@@ -982,7 +982,7 @@
- {
- 
-   ushort lid, a, c, d;
--  uchar *table_buf;
-+  uchar *table_buf = nullptr;
-   uchar uc;
-   uchar s[2];
-   int LensDataValid = 0;

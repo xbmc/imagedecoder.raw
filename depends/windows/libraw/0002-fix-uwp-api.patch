@@ -1,27 +1,27 @@
 --- a/src/libraw_datastream.cpp
 +++ b/src/libraw_datastream.cpp
-@@ -687,6 +687,27 @@
+@@ -644,6 +644,27 @@ void *LibRaw_bigfile_datastream::make_jas_stream()
  // == LibRaw_windows_datastream
- #ifdef WIN32
+ #ifdef LIBRAW_WIN32_CALLS
  
 +#if defined(WINAPI_FAMILY) && (WINAPI_FAMILY == WINAPI_FAMILY_APP)
 +// For Unicode platforms, TCHAR is defined as synonymous with the WCHAR type.
 +HANDLE WINAPI CreateFile(LPCWSTR lpFileName,
-+                          DWORD dwDesiredAccess,
-+                          DWORD dwShareMode,
-+                          LPSECURITY_ATTRIBUTES lpSecurityAttributes,
-+                          DWORD dwCreationDisposition,
-+                          DWORD dwFlagsAndAttributes,
-+                          HANDLE hTemplateFile)
++                         DWORD dwDesiredAccess,
++                         DWORD dwShareMode,
++                         LPSECURITY_ATTRIBUTES lpSecurityAttributes,
++                         DWORD dwCreationDisposition,
++                         DWORD dwFlagsAndAttributes,
++                         HANDLE hTemplateFile)
 +{
-+    CREATEFILE2_EXTENDED_PARAMETERS createExParams;
-+    createExParams.dwSize = sizeof(CREATEFILE2_EXTENDED_PARAMETERS);
-+    createExParams.dwFileAttributes = dwFlagsAndAttributes & 0xFFFF;
-+    createExParams.dwFileFlags = dwFlagsAndAttributes & 0xFFF00000;
-+    createExParams.dwSecurityQosFlags = dwFlagsAndAttributes & 0x000F00000;
-+    createExParams.lpSecurityAttributes = lpSecurityAttributes;
-+    createExParams.hTemplateFile = hTemplateFile;
-+    return CreateFile2(lpFileName, dwDesiredAccess, dwShareMode, dwCreationDisposition, &createExParams);
++  CREATEFILE2_EXTENDED_PARAMETERS createExParams;
++  createExParams.dwSize = sizeof(CREATEFILE2_EXTENDED_PARAMETERS);
++  createExParams.dwFileAttributes = dwFlagsAndAttributes & 0xFFFF;
++  createExParams.dwFileFlags = dwFlagsAndAttributes & 0xFFF00000;
++  createExParams.dwSecurityQosFlags = dwFlagsAndAttributes & 0x000F00000;
++  createExParams.lpSecurityAttributes = lpSecurityAttributes;
++  createExParams.hTemplateFile = hTemplateFile;
++  return CreateFile2(lpFileName, dwDesiredAccess, dwShareMode, dwCreationDisposition, &createExParams);
 +}
 +#endif
 +
