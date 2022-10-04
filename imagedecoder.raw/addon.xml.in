@@ -28,6 +28,7 @@
     <summary lang="fr_FR">Lecture des images RAW d&apos;appareil photo numérique</summary>
     <summary lang="it_IT">Lettura di immagini RAW della fotocamera</summary>
     <summary lang="ko_KR">RAW 디지털 카메라 이미지 읽기</summary>
+    <summary lang="lv_LV">RAW digitālās kameras attēlu lasīšana</summary>
     <summary lang="nb_NO">Lesing av RAW digicam-bilder</summary>
     <summary lang="pl_PL">Odczytywanie obrazów cyfrowych RAW</summary>
     <summary lang="pt_BR">Leitura de imagens RAW de câmeras digitais</summary>
@@ -46,6 +47,7 @@
     <description lang="fr_FR">Module complémentaire basé sur LibRaw pour la lecture de fichiers RAW obtenus à partir d&apos;appareils photo numériques (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR et autres ; pratiquement tous les formats RAW sont pris en charge).</description>
     <description lang="it_IT">Addon basato su LibRaw per la lettura di file RAW ottenuti da fotocamere digitali (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR e altri; sono supportati praticamente tutti i formati RAW).</description>
     <description lang="ko_KR">디지털 사진 카메라에서 얻은 RAW 파일을 읽기 위한 LibRaw 기반 애드온 (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR 등, 거의 모든 RAW 형식이 지원됨).</description>
+    <description lang="lv_LV">Papildinājums, kas balstīts uz LibRaw bibliotēku, lai lasītu RAW failus, kas iegūti no digitālajām fotokamerām (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR un pārējie; tiek atbalstīti gandrīz visi RAW formāti).</description>
     <description lang="nb_NO">Utvidelse basert på LibRaw for lesing av RAW-filer hentet fra digitalkameraer (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR og andre; stort sett alle RAW-formater støttes).</description>
     <description lang="pl_PL">Dodatek oparty na LibRaw do odczytu plików RAW uzyskanych z cyfrowych aparatów fotograficznych (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR i innych; obsługiwane są praktycznie wszystkie formaty RAW).</description>
     <description lang="pt_BR">Add-on baseado na biblioteca LibRaw para leitura de arquivos RAW provenientes de câmeras fotográficas digitais (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR e outros; praticamente todos os formatos RAW são suportados).</description>
