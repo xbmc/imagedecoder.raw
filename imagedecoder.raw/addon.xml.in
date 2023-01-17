@@ -26,6 +26,7 @@
     <summary lang="et_EE">RAW digikaamera piltide lugemine</summary>
     <summary lang="fi_FI">Digitaalikameroiden RAW-kuvien luku</summary>
     <summary lang="fr_FR">Lecture des images RAW d&apos;appareil photo numérique</summary>
+    <summary lang="hr_HR">Čitanje RAW digicam slika</summary>
     <summary lang="it_IT">Lettura di immagini RAW da fotocamera</summary>
     <summary lang="ko_KR">RAW 디지털 카메라 이미지 읽기</summary>
     <summary lang="lv_LV">RAW digitālās kameras attēlu lasīšana</summary>
@@ -45,6 +46,7 @@
     <description lang="et_EE">LibRaw- põhine lisamoodul digikaamera RAW-failide lugemiseks (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR jt; toetatud on praktiliselt kõik RAW-vormingud).</description>
     <description lang="fi_FI">LibRaw-pohjainen lisäosa digitaalikameroiden RAW-tiedostojen lukuun (käytännössä kaikkia muotoja tuetaan, kuten CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR).</description>
     <description lang="fr_FR">Module complémentaire basé sur LibRaw pour la lecture de fichiers RAW obtenus à partir d&apos;appareils photo numériques (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR et autres ; pratiquement tous les formats RAW sont pris en charge).</description>
+    <description lang="hr_HR">Dodatak temeljen na LibRaw za čitanje RAW datoteka pružanih od strane digitalnih kamera (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR i drugih; virtualno svi RAW formati su podržani).</description>
     <description lang="it_IT">Add-on basato su LibRaw per la lettura di file RAW ottenuti da fotocamere digitali (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR e altri; praticamente tutti i formati RAW sono supportati).</description>
     <description lang="ko_KR">디지털 사진 카메라에서 얻은 RAW 파일을 읽기 위한 LibRaw 기반 애드온 (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR 등, 거의 모든 RAW 형식이 지원됨).</description>
     <description lang="lv_LV">Papildinājums, kas balstīts uz LibRaw bibliotēku, lai lasītu RAW failus, kas iegūti no digitālajām fotokamerām (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR un pārējie; tiek atbalstīti gandrīz visi RAW formāti).</description>
