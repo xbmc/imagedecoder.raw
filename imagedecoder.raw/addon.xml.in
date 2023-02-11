@@ -18,6 +18,7 @@
       <icon>icon.png</icon>
     </assets>
     <summary lang="ca_ES">Lectura d&apos;imatges RAW de la càmera digital</summary>
+    <summary lang="cs_CZ">Čtení obrázků RAW digitálních fotoaparátů</summary>
     <summary lang="da_DK">Læsning af RAW digicam-billeder</summary>
     <summary lang="de_DE">Lesen von RAW-Bildern von Digitalkameras</summary>
     <summary lang="en_GB">Reading of RAW digicam images</summary>
@@ -38,6 +39,7 @@
     <summary lang="tr_TR">RAW dijital kamera resimlerinin okunması</summary>
     <summary lang="zh_CN">读取 RAW 数字图像</summary>
     <description lang="ca_ES">Complement basat en LibRaw per llegir fitxers RAW obtinguts de càmeres fotogràfiques digitals (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR i altres; pràcticament tots els formats RAW són compatibles).</description>
+    <description lang="cs_CZ">Doplněk založený na LibRaw pro čtení obrázků RAW z digitálních fotoaparátů (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR a další; teoreticky jsou podporovány všechny formáty RAW).</description>
     <description lang="da_DK">Addon baseret på LibRaw til læsning af RAW-filer hentet fra digitale kameraer (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR og andre; stort set alle RAW-formater understøttes).</description>
     <description lang="de_DE">Addon zum Lesen von Dateien im Rohdatenformat digitaler Fotokameras, basierend auf LibRaw (CRW / CR2, NEF, RAF, DNG, MOS, KDC, DCR und andere. Praktisch alle RAW-Formate werden unterstützt).</description>
     <description lang="en_GB">Addon based on LibRaw for reading RAW files obtained from digital photo cameras (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR and others; virtually all RAW formats are supported).</description>
