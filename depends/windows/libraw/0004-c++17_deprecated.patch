@@ -1,0 +1,90 @@
+diff -Nru LibRaw-0.19.5.ori/libraw/libraw_datastream.h LibRaw-0.19.5/libraw/libraw_datastream.h
+--- LibRaw-0.19.5.ori/libraw/libraw_datastream.h	2020-10-04 00:22:41.884130298 +0200
++++ LibRaw-0.19.5/libraw/libraw_datastream.h	2020-10-04 00:22:45.727060248 +0200
+@@ -112,14 +112,14 @@
+ };
+ 
+ #ifdef WIN32
+-template class DllDef std::auto_ptr<std::streambuf>;
++template class DllDef std::shared_ptr<std::streambuf>;
+ #endif
+ 
+ class DllDef LibRaw_file_datastream : public LibRaw_abstract_datastream
+ {
+ protected:
+-  std::auto_ptr<std::streambuf> f;       /* will close() automatically through dtor */
+-  std::auto_ptr<std::streambuf> saved_f; /* when *f is a subfile, *saved_f is the master file */
++  std::shared_ptr<std::streambuf> f;       /* will close() automatically through dtor */
++  std::shared_ptr<std::streambuf> saved_f; /* when *f is a subfile, *saved_f is the master file */
+   std::string filename;
+   INT64 _fsize;
+ #ifdef WIN32
+diff -Nru LibRaw-0.19.5.ori/src/libraw_datastream.cpp LibRaw-0.19.5/src/libraw_datastream.cpp
+--- LibRaw-0.19.5.ori/src/libraw_datastream.cpp	2020-10-04 00:22:41.890167895 +0200
++++ LibRaw-0.19.5/src/libraw_datastream.cpp	2020-10-04 00:23:50.672228515 +0200
+@@ -82,7 +82,7 @@
+       _fsize = st.st_size;
+ #endif
+ 
+-    std::auto_ptr<std::filebuf> buf(new std::filebuf());
++    std::shared_ptr<std::filebuf> buf(new std::filebuf());
+     buf->open(filename.c_str(), std::ios_base::in | std::ios_base::binary);
+     if (buf->is_open())
+     {
+@@ -99,7 +99,7 @@
+     struct _stati64 st;
+     if (!_wstati64(wfilename.c_str(), &st))
+       _fsize = st.st_size;
+-    std::auto_ptr<std::filebuf> buf(new std::filebuf());
++    std::shared_ptr<std::filebuf> buf(new std::filebuf());
+     buf->open(wfilename.c_str(), std::ios_base::in | std::ios_base::binary);
+     if (buf->is_open())
+     {
+@@ -223,7 +223,7 @@
+   if (saved_f.get())
+     return EBUSY;
+   saved_f = f;
+-  std::auto_ptr<std::filebuf> buf(new std::filebuf());
++  std::shared_ptr<std::filebuf> buf(new std::filebuf());
+ 
+   buf->open(fn, std::ios_base::in | std::ios_base::binary);
+   if (!buf->is_open())
+@@ -246,7 +246,7 @@
+   if (saved_f.get())
+     return EBUSY;
+   saved_f = f;
+-  std::auto_ptr<std::filebuf> buf(new std::filebuf());
++  std::shared_ptr<std::filebuf> buf(new std::filebuf());
+ 
+   buf->open(fn, std::ios_base::in | std::ios_base::binary);
+   if (!buf->is_open())
+diff -Nru LibRaw-0.19.5.ori/src/libraw_cxx.cpp LibRaw-0.19.5/src/libraw_cxx.cpp
+--- LibRaw-0.19.5.ori/src/libraw_cxx.cpp	2020-10-04 01:17:35.680194887 +0200
++++ LibRaw-0.19.5/src/libraw_cxx.cpp	2020-10-04 01:19:19.493872587 +0200
+@@ -3310,7 +3310,7 @@
+     {
+       if (!imgdata.rawdata.ph1_cblack || !imgdata.rawdata.ph1_rblack)
+       {
+-        register int bl = imgdata.color.phase_one_data.t_black;
++        int bl = imgdata.color.phase_one_data.t_black;
+         for (int row = 0; row < S.raw_height; row++)
+         {
+           checkCancel();
+@@ -3324,7 +3324,7 @@
+       }
+       else
+       {
+-        register int bl = imgdata.color.phase_one_data.t_black;
++        int bl = imgdata.color.phase_one_data.t_black;
+         for (int row = 0; row < S.raw_height; row++)
+         {
+           checkCancel();
+@@ -6150,7 +6150,7 @@
+ 
+ static void *lr_memmem(const void *l, size_t l_len, const void *s, size_t s_len)
+ {
+-  register char *cur, *last;
++  char *cur, *last;
+   const char *cl = (const char *)l;
+   const char *cs = (const char *)s;
+ 

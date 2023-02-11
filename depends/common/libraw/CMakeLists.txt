@@ -16,6 +16,7 @@ externalproject_add(libraw
                       --enable-jpeg
                       --with-pic
                       --prefix=${OUTPUT_DIR}
+                      "CXXFLAGS=${CMAKE_CXX_FLAGS} -std=c++11"
   INSTALL_COMMAND ""
   BUILD_IN_SOURCE 1)
 
