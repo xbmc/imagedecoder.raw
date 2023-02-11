@@ -155,4 +155,3 @@ msgstr ""
 msgctxt "#30121"
 msgid "SIGMA X3F Camera RAW File - An X3F file is a RAW file saved in SIGMA's X3F format."
 msgstr ""
-
