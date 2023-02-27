@@ -5,9 +5,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Addons\n"
-"Report-Msgid-Bugs-To: https://github.com/xbmc/imagedecoder.raw/issues/\n"
+"Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-09-09 15:30+0000\n"
+"PO-Revision-Date: 2023-02-27 20:15+0000\n"
 "Last-Translator: Minho Park <parkmino@gmail.com>\n"
 "Language-Team: Korean <https://kodi.weblate.cloud/projects/kodi-add-ons-image-decoders/imagedecoder-raw/ko_kr/>\n"
 "Language: ko_kr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.8\n"
+"X-Generator: Weblate 4.15.2\n"
 
 msgctxt "Addon Summary"
 msgid "Reading of RAW digicam images"
@@ -28,109 +28,109 @@ msgstr "디지털 사진 카메라에서 얻은 RAW 파일을 읽기 위한 LibR
 #. Supported file extension ".3fr" and mimetype "image/3fr" description
 msgctxt "#30100"
 msgid "Hasselblad 3F RAW Image - Digital photo captured by a Hasselblad digital camera."
-msgstr ""
+msgstr "Hasselblad 3F RAW 이미지 - Hasselblad 디지털 카메라로 캡처한 디지털 사진입니다."
 
 #. Supported file extension ".arw" and mimetype "image/arw" description
 msgctxt "#30101"
 msgid "Sony Alpha Raw Digital Camera Image - An ARW file is a digital photograph captured by various Sony digital cameras."
-msgstr ""
+msgstr "Sony Alpha Raw 디지털 카메라 이미지 - ARW 파일은 다양한 Sony 디지털 카메라로 캡처한 디지털 사진입니다."
 
 #. Supported file extension ".cr2" and mimetype "image/cr2" description
 msgctxt "#30102"
 msgid "Canon Raw Image File - A CR2 file is a raw camera image created by various Canon digital cameras."
-msgstr ""
+msgstr "Canon Raw 이미지 파일 - CR2 파일은 다양한 Canon 디지털 카메라에서 생성된 Raw 카메라 이미지입니다."
 
 #. Supported file extension ".crw" and mimetype "image/crw" description
 msgctxt "#30103"
 msgid "Canon Raw CIFF Image File - Uncompressed and unprocessed Camera RAW image file from a Canon digital camera."
-msgstr ""
+msgstr "Canon Raw CIFF 이미지 파일 - Canon 디지털 카메라의 비압축 및 처리되지 않은 Camera RAW 이미지 파일입니다."
 
 #. Supported file extension ".dcr" and mimetype "image/dcr" description
 msgctxt "#30104"
 msgid "Kodak Digital Camera RAW Image - DCR file is a digital photograph saved in the Kodak Digital Camera RAW format."
-msgstr ""
+msgstr "Kodak 디지털 카메라 RAW 이미지 - DCR 파일은 Kodak 디지털 카메라의 RAW 형식으로 저장된 디지털 사진입니다."
 
 #. Supported file extension ".dng" and mimetype "image/dng" description
 msgctxt "#30105"
 msgid "Digital Negative Image File - A DNG file is a RAW camera image saved in the Digital Negative (DNG) format."
-msgstr ""
+msgstr "디지털 네거티브 이미지 파일 - DNG 파일은 디지털 네거티브(DNG) 형식으로 저장된 RAW 카메라 이미지입니다."
 
 #. Supported file extension ".erf" and mimetype "image/erf" description
 msgctxt "#30106"
 msgid "Epson RAW File - Camera RAW file captured by an Epson digital camera."
-msgstr ""
+msgstr "Epson RAW 파일 - Epson 디지털 카메라로 캡처한 카메라 RAW 파일입니다."
 
 #. Supported file extension ".kdc" and mimetype "image/kdc" description
 msgctxt "#30107"
 msgid "Kodak Photo-Enhancer File - Bitmap image format used by several Kodak digital cameras."
-msgstr ""
+msgstr "Kodak Photo-Enhancer 파일 - 여러 Kodak 디지털 카메라에서 사용되는 비트맵 이미지 형식입니다."
 
 #. Supported file extension ".mdc" and mimetype "image/mdc" description
 msgctxt "#30108"
 msgid "Minolta Camera Raw Image - An MDC file is a camera raw image created by a Minolta digital camera."
-msgstr ""
+msgstr "Minolta 카메라 Raw 이미지 - MDC 파일은 Minolta 디지털 카메라로 만든 카메라 Raw 이미지입니다."
 
 #. Supported file extension ".mef" and mimetype "image/mef" description
 msgctxt "#30109"
 msgid "Mamiya RAW Image - Camera RAW image captured by a Mamiya digital camera."
-msgstr ""
+msgstr "Mamiya RAW 이미지 - Mamiya 디지털 카메라로 캡처한 카메라 RAW 이미지입니다."
 
 #. Supported file extension ".mos" and mimetype "image/mos" description
 msgctxt "#30110"
 msgid "Leaf Camera RAW File - RAW image captured by several different types of digital cameras."
-msgstr ""
+msgstr "Leaf 카메라 RAW 파일 - 여러 종류의 디지털 카메라로 캡처한 RAW 이미지입니다."
 
 #. Supported file extension ".mrw" and mimetype "image/mrw" description
 msgctxt "#30111"
 msgid "Minolta Raw Image File - Raw image format used by Minolta Dimage digital cameras."
-msgstr ""
+msgstr "Minolta Raw 이미지 파일 - Minolta Dimage 디지털 카메라에서 사용하는 Raw 이미지 형식입니다."
 
 #. Supported file extension ".nef" and mimetype "image/nef" description
 msgctxt "#30112"
 msgid "Nikon Electronic Format RAW Image - An NEF file is a raw photo captured by a Nikon digital camera."
-msgstr ""
+msgstr "Nikon 형식 RAW 이미지 - NEF 파일은 Nikon 디지털 카메라로 캡처한 RAW 사진입니다."
 
 #. Supported file extension ".nrw" and mimetype "image/nrw" description
 msgctxt "#30113"
 msgid "Nikon Raw Image File - Raw image file produced by high-end Nikon COOLPIX and digital SLR cameras."
-msgstr ""
+msgstr "Nikon Raw 이미지 파일 - 고급 Nikon COOLPIX 및 디지털 SLR 카메라에서 생성된 Raw 이미지 파일입니다."
 
 #. Supported file extension ".orf" and mimetype "image/orf" description
 msgctxt "#30114"
 msgid "Olympus RAW File - An ORF file is a RAW photo taken with an Olympus digital camera."
-msgstr ""
+msgstr "Olympus RAW 파일 - ORF 파일은 Olympus 디지털 카메라로 찍은 RAW 사진입니다."
 
 #. Supported file extension ".pef" and mimetype "image/pef" description
 msgctxt "#30115"
 msgid "Pentax Electronic File - A PEF file is a raw camera image created by Pentax digital cameras."
-msgstr ""
+msgstr "Pentax Electronic File - PEF 파일은 Pentax 디지털 카메라로 만든 원시 카메라 이미지입니다."
 
 #. Supported file extension ".ppm" and mimetype "image/x-portable-pixmap" description
 msgctxt "#30116"
 msgid "Portable Pixmap Image File - PPM file is a 24-bit color image formatted using a text format."
-msgstr ""
+msgstr "Portable Pixmap 이미지 파일 - PPM 파일은 텍스트 형식을 사용하여 형식화된 24비트 컬러 이미지입니다."
 
 #. Supported file extension ".raf" and mimetype "image/raf" description
 msgctxt "#30117"
 msgid "Fuji RAW Image File - An RAF file is a digital photograph captured by Fuji digital cameras."
-msgstr ""
+msgstr "Fuji RAW 이미지 파일 - RAF 파일은 Fuji 디지털 카메라로 캡처한 디지털 사진입니다."
 
 #. Supported file extension ".raw" and mimetype "image/raw" description
 msgctxt "#30118"
 msgid "Raw Image Data File - Image generated by digital cameras such as Panasonic, Leica, and Casio."
-msgstr ""
+msgstr "RAW 이미지 데이터 파일 - Panasonic, Leica 및 Casio와 같은 디지털 카메라에서 생성된 이미지입니다."
 
 #. Supported file extension ".rw2" and mimetype "image/rw2" description
 msgctxt "#30119"
 msgid "Panasonic RAW Image - An RW2 file is a raw camera image created by a Panasonic LUMIX digital camera."
-msgstr ""
+msgstr "Panasonic RAW 이미지 - RW2 파일은 Panasonic LUMIX 디지털 카메라로 만든 RAW 카메라 이미지입니다."
 
 #. Supported file extension ".srw" and mimetype "image/srw" description
 msgctxt "#30120"
 msgid "Samsung RAW Image - Digital photo taken by a Samsung digital camera."
-msgstr ""
+msgstr "Samsung RAW 이미지 - 삼성 디지털 카메라로 찍은 디지털 사진입니다."
 
 #. Supported file extension ".srw" and mimetype "image/srw" description
 msgctxt "#30121"
 msgid "SIGMA X3F Camera RAW File - An X3F file is a RAW file saved in SIGMA's X3F format."
-msgstr ""
+msgstr "SIGMA X3F 카메라 RAW 파일 - X3F 파일은 SIGMA의 X3F 형식으로 저장된 RAW 파일입니다."
