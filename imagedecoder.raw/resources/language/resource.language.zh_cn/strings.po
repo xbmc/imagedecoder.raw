@@ -5,9 +5,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Addons\n"
-"Report-Msgid-Bugs-To: https://github.com/xbmc/imagedecoder.raw/issues/\n"
+"Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-09-19 04:30+0000\n"
+"PO-Revision-Date: 2023-03-27 08:16+0000\n"
 "Last-Translator: taxigps <taxigps@sina.com>\n"
 "Language-Team: Chinese (China) <https://kodi.weblate.cloud/projects/kodi-add-ons-image-decoders/imagedecoder-raw/zh_cn/>\n"
 "Language: zh_cn\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.8\n"
+"X-Generator: Weblate 4.15.2\n"
 
 msgctxt "Addon Summary"
 msgid "Reading of RAW digicam images"
@@ -28,109 +28,109 @@ msgstr "基于 LibRaw 的插件，用于读取从数码相机获取的 RAW 文�
 #. Supported file extension ".3fr" and mimetype "image/3fr" description
 msgctxt "#30100"
 msgid "Hasselblad 3F RAW Image - Digital photo captured by a Hasselblad digital camera."
-msgstr ""
+msgstr "哈苏 3F RAW 图像 - 哈苏数码相机拍摄的数码照片。"
 
 #. Supported file extension ".arw" and mimetype "image/arw" description
 msgctxt "#30101"
 msgid "Sony Alpha Raw Digital Camera Image - An ARW file is a digital photograph captured by various Sony digital cameras."
-msgstr ""
+msgstr "索尼阿尔法 Raw 数码相机图像 - ARW 文件是由各种索尼数码相机拍摄的数码照片。"
 
 #. Supported file extension ".cr2" and mimetype "image/cr2" description
 msgctxt "#30102"
 msgid "Canon Raw Image File - A CR2 file is a raw camera image created by various Canon digital cameras."
-msgstr ""
+msgstr "佳能 Raw 图像文件 - CR2 文件是由各种佳能数码相机创建的 Raw 相机图像。"
 
 #. Supported file extension ".crw" and mimetype "image/crw" description
 msgctxt "#30103"
 msgid "Canon Raw CIFF Image File - Uncompressed and unprocessed Camera RAW image file from a Canon digital camera."
-msgstr ""
+msgstr "佳能 Raw CIFF 图像文件 - 来自佳能数码相机的未压缩和未处理的相机 Raw 图像文件。"
 
 #. Supported file extension ".dcr" and mimetype "image/dcr" description
 msgctxt "#30104"
 msgid "Kodak Digital Camera RAW Image - DCR file is a digital photograph saved in the Kodak Digital Camera RAW format."
-msgstr ""
+msgstr "柯达数码相机 Raw 图像 - DCR 文件是以柯达数字相机 Raw 格式保存的数字照片。"
 
 #. Supported file extension ".dng" and mimetype "image/dng" description
 msgctxt "#30105"
 msgid "Digital Negative Image File - A DNG file is a RAW camera image saved in the Digital Negative (DNG) format."
-msgstr ""
+msgstr "数字负片图像文件 - DNG 文件是以数字负片（DNG）格式保存的 RAW 相机图像。"
 
 #. Supported file extension ".erf" and mimetype "image/erf" description
 msgctxt "#30106"
 msgid "Epson RAW File - Camera RAW file captured by an Epson digital camera."
-msgstr ""
+msgstr "爱普生 RAW 文件 - 由爱普生数码相机拍摄的相机 RAW 文件。"
 
 #. Supported file extension ".kdc" and mimetype "image/kdc" description
 msgctxt "#30107"
 msgid "Kodak Photo-Enhancer File - Bitmap image format used by several Kodak digital cameras."
-msgstr ""
+msgstr "柯达照片增强器文件 - 几种柯达数码相机使用的位图图像格式。"
 
 #. Supported file extension ".mdc" and mimetype "image/mdc" description
 msgctxt "#30108"
 msgid "Minolta Camera Raw Image - An MDC file is a camera raw image created by a Minolta digital camera."
-msgstr ""
+msgstr "美能达相机 Raw 图像 - MDC 文件是由美能达数码相机创建的相机 Raw 图像。"
 
 #. Supported file extension ".mef" and mimetype "image/mef" description
 msgctxt "#30109"
 msgid "Mamiya RAW Image - Camera RAW image captured by a Mamiya digital camera."
-msgstr ""
+msgstr "玛米亚 RAW 图像 - 由玛米亚数码相机拍摄的相机 RAW 图像。"
 
 #. Supported file extension ".mos" and mimetype "image/mos" description
 msgctxt "#30110"
 msgid "Leaf Camera RAW File - RAW image captured by several different types of digital cameras."
-msgstr ""
+msgstr "利图相机 RAW 文件 - 由几种不同类型的数码相机拍摄的 RAW 图像。"
 
 #. Supported file extension ".mrw" and mimetype "image/mrw" description
 msgctxt "#30111"
 msgid "Minolta Raw Image File - Raw image format used by Minolta Dimage digital cameras."
-msgstr ""
+msgstr "美能达 Raw 图像文件 - 美能达 Dimage 数码相机使用的 Raw 图像格式。"
 
 #. Supported file extension ".nef" and mimetype "image/nef" description
 msgctxt "#30112"
 msgid "Nikon Electronic Format RAW Image - An NEF file is a raw photo captured by a Nikon digital camera."
-msgstr ""
+msgstr "尼康电子格式 RAW 图像 - NEF 文件是由尼康数码相机拍摄的 Raw 照片。"
 
 #. Supported file extension ".nrw" and mimetype "image/nrw" description
 msgctxt "#30113"
 msgid "Nikon Raw Image File - Raw image file produced by high-end Nikon COOLPIX and digital SLR cameras."
-msgstr ""
+msgstr "尼康 Raw 图像文件 - 由高端尼康 COOLPIX 和数码单反相机制作的 Raw 图像文件。"
 
 #. Supported file extension ".orf" and mimetype "image/orf" description
 msgctxt "#30114"
 msgid "Olympus RAW File - An ORF file is a RAW photo taken with an Olympus digital camera."
-msgstr ""
+msgstr "奥林巴斯 RAW 文件 - ORF 文件是用奥林巴斯数码相机拍摄的 RAW 照片。"
 
 #. Supported file extension ".pef" and mimetype "image/pef" description
 msgctxt "#30115"
 msgid "Pentax Electronic File - A PEF file is a raw camera image created by Pentax digital cameras."
-msgstr ""
+msgstr "宾得电子文件 - PEF 文件是由宾得数码相机创建的 Raw 相机图像。"
 
 #. Supported file extension ".ppm" and mimetype "image/x-portable-pixmap" description
 msgctxt "#30116"
 msgid "Portable Pixmap Image File - PPM file is a 24-bit color image formatted using a text format."
-msgstr ""
+msgstr "可移植的 Pixmap 图像文件 - PPM 文件是一个使用文本格式格式化的24位彩色图像。"
 
 #. Supported file extension ".raf" and mimetype "image/raf" description
 msgctxt "#30117"
 msgid "Fuji RAW Image File - An RAF file is a digital photograph captured by Fuji digital cameras."
-msgstr ""
+msgstr "富士 RAW 图像文件 - RAF 文件是由富士数码相机拍摄的数码照片。"
 
 #. Supported file extension ".raw" and mimetype "image/raw" description
 msgctxt "#30118"
 msgid "Raw Image Data File - Image generated by digital cameras such as Panasonic, Leica, and Casio."
-msgstr ""
+msgstr "Raw 图像数据文件 - 由松下、徕卡和卡西欧等数码相机生成的图像。"
 
 #. Supported file extension ".rw2" and mimetype "image/rw2" description
 msgctxt "#30119"
 msgid "Panasonic RAW Image - An RW2 file is a raw camera image created by a Panasonic LUMIX digital camera."
-msgstr ""
+msgstr "松下 RAW 图像 - RW2 文件是由松下 LUMIX 数码相机创建的 Raw 相机图像。"
 
 #. Supported file extension ".srw" and mimetype "image/srw" description
 msgctxt "#30120"
 msgid "Samsung RAW Image - Digital photo taken by a Samsung digital camera."
-msgstr ""
+msgstr "三星 RAW 图像 - 由三星数码相机拍摄的数码照片。"
 
 #. Supported file extension ".srw" and mimetype "image/srw" description
 msgctxt "#30121"
 msgid "SIGMA X3F Camera RAW File - An X3F file is a RAW file saved in SIGMA's X3F format."
-msgstr ""
+msgstr "西格玛 X3F 相机 RAW 文件 - X3F 文件是以西格玛的 X3F 格式保存的 RAW 文件。"
