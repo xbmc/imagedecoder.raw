@@ -5,131 +5,132 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Addons\n"
-"Report-Msgid-Bugs-To: https://github.com/xbmc/imagedecoder.raw/issues/\n"
+"Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-03-06 18:17+0000\n"
+"Last-Translator: Linerly <linerly@proton.me>\n"
+"Language-Team: Indonesian <https://kodi.weblate.cloud/projects/kodi-add-ons-image-decoders/imagedecoder-raw/id_id/>\n"
 "Language: id_id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.4\n"
 
 msgctxt "Addon Summary"
 msgid "Reading of RAW digicam images"
-msgstr ""
+msgstr "Pembacaan gambar digicam RAW"
 
 msgctxt "Addon Description"
 msgid "Addon based on LibRaw for reading RAW files obtained from digital photo cameras (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR and others; virtually all RAW formats are supported)."
-msgstr ""
+msgstr "Pengaya berdasarkan LibRaw untuk membaca berkas RAW yang didapatkan dari kamera foto digital (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR, dan lainnya; hampir semua format RAW didukung)."
 
 #. Supported file extension ".3fr" and mimetype "image/3fr" description
 msgctxt "#30100"
 msgid "Hasselblad 3F RAW Image - Digital photo captured by a Hasselblad digital camera."
-msgstr ""
+msgstr "Gambar RAW Hasselblad 3F - Foto digital yang diambil oleh kamera digital Hasselblad."
 
 #. Supported file extension ".arw" and mimetype "image/arw" description
 msgctxt "#30101"
 msgid "Sony Alpha Raw Digital Camera Image - An ARW file is a digital photograph captured by various Sony digital cameras."
-msgstr ""
+msgstr "Gambar Kamera Digital Sony Alpha Raw - Sebuah berkas ARW adalah foto digital yang diambil oleh berbagai kamera digital Sony."
 
 #. Supported file extension ".cr2" and mimetype "image/cr2" description
 msgctxt "#30102"
 msgid "Canon Raw Image File - A CR2 file is a raw camera image created by various Canon digital cameras."
-msgstr ""
+msgstr "Berkas Gambar Raw Canon - Sebuah berkas CR2 adalah gambar kamera mentah yang dibuat oleh berbagai kamera digital Canon."
 
 #. Supported file extension ".crw" and mimetype "image/crw" description
 msgctxt "#30103"
 msgid "Canon Raw CIFF Image File - Uncompressed and unprocessed Camera RAW image file from a Canon digital camera."
-msgstr ""
+msgstr "Berkas Gambar CIFF Raw Canon - Berkas gambar RAW Kamera yang tidak dikompres dan tidak diproses dari kamera digital Canon."
 
 #. Supported file extension ".dcr" and mimetype "image/dcr" description
 msgctxt "#30104"
 msgid "Kodak Digital Camera RAW Image - DCR file is a digital photograph saved in the Kodak Digital Camera RAW format."
-msgstr ""
+msgstr "Gambar RAW Kamera Digital Kodak - Berkas DCR adalah foto digital yang disimpan dalam format RAW Kamera Digital Kodak."
 
 #. Supported file extension ".dng" and mimetype "image/dng" description
 msgctxt "#30105"
 msgid "Digital Negative Image File - A DNG file is a RAW camera image saved in the Digital Negative (DNG) format."
-msgstr ""
+msgstr "Berkas Gambar Negatif Digital - Sebuah berkas DNG adalah gambar kamera RAW yang disimpan dalam format Digital Negative (DNG)."
 
 #. Supported file extension ".erf" and mimetype "image/erf" description
 msgctxt "#30106"
 msgid "Epson RAW File - Camera RAW file captured by an Epson digital camera."
-msgstr ""
+msgstr "Berkas RAW Epson - Berkas RAW Kamera yang diambil oleh kamera digital Epson."
 
 #. Supported file extension ".kdc" and mimetype "image/kdc" description
 msgctxt "#30107"
 msgid "Kodak Photo-Enhancer File - Bitmap image format used by several Kodak digital cameras."
-msgstr ""
+msgstr "Berkas Kodak Photo-Enhancer - Format gambar bitmap yang digunakan oleh berbagai kamera digital Kodak."
 
 #. Supported file extension ".mdc" and mimetype "image/mdc" description
 msgctxt "#30108"
 msgid "Minolta Camera Raw Image - An MDC file is a camera raw image created by a Minolta digital camera."
-msgstr ""
+msgstr "Gambar Raw Kamera Minolta - Sebuah berkas MDC adalah gambar kamera mentah yang dibuat oleh kamera digital Minolta."
 
 #. Supported file extension ".mef" and mimetype "image/mef" description
 msgctxt "#30109"
 msgid "Mamiya RAW Image - Camera RAW image captured by a Mamiya digital camera."
-msgstr ""
+msgstr "Gambar RAW Mamiya - Gambar RAW Kamera yang diambil oleh kamera digital Mamiya."
 
 #. Supported file extension ".mos" and mimetype "image/mos" description
 msgctxt "#30110"
 msgid "Leaf Camera RAW File - RAW image captured by several different types of digital cameras."
-msgstr ""
+msgstr "Berkas RAW Kamera Leaf - Gambar RAW yang diambil oleh berbagai jenis kamera digital."
 
 #. Supported file extension ".mrw" and mimetype "image/mrw" description
 msgctxt "#30111"
 msgid "Minolta Raw Image File - Raw image format used by Minolta Dimage digital cameras."
-msgstr ""
+msgstr "Berkas Gambar Raw Minolta - Format gambar mentah yang digunakan oleh kamera digital Minolta Dimage."
 
 #. Supported file extension ".nef" and mimetype "image/nef" description
 msgctxt "#30112"
 msgid "Nikon Electronic Format RAW Image - An NEF file is a raw photo captured by a Nikon digital camera."
-msgstr ""
+msgstr "Gambar RAW Format Elektrik Nikon - Sebuah berkas NEF adalah foto mentah yang diambil oleh kamera digital Nikon."
 
 #. Supported file extension ".nrw" and mimetype "image/nrw" description
 msgctxt "#30113"
 msgid "Nikon Raw Image File - Raw image file produced by high-end Nikon COOLPIX and digital SLR cameras."
-msgstr ""
+msgstr "Berkas Gambar Raw Nikon - Berkas gambar mentah yang dibuat oleh kamera Nikon COOLPIX dan SLR digital high-end."
 
 #. Supported file extension ".orf" and mimetype "image/orf" description
 msgctxt "#30114"
 msgid "Olympus RAW File - An ORF file is a RAW photo taken with an Olympus digital camera."
-msgstr ""
+msgstr "Berkas RAW Olympus - Sebuah berkas ORF adalah foto RAW yang diambil oleh kamera digital Olympus."
 
 #. Supported file extension ".pef" and mimetype "image/pef" description
 msgctxt "#30115"
 msgid "Pentax Electronic File - A PEF file is a raw camera image created by Pentax digital cameras."
-msgstr ""
+msgstr "Berkas Elektronik Pentax - Sebuah berkas PEF adalah gambar kamera mentah yang dibuat oleh kamera digital Pentax."
 
 #. Supported file extension ".ppm" and mimetype "image/x-portable-pixmap" description
 msgctxt "#30116"
 msgid "Portable Pixmap Image File - PPM file is a 24-bit color image formatted using a text format."
-msgstr ""
+msgstr "Berkas Gambar Pixmap Portabel - Berkas PPM adalah gambar warna 24 bit yang diformat menggunakan format teks."
 
 #. Supported file extension ".raf" and mimetype "image/raf" description
 msgctxt "#30117"
 msgid "Fuji RAW Image File - An RAF file is a digital photograph captured by Fuji digital cameras."
-msgstr ""
+msgstr "Berkas Gambar RAW Fuji - Sebuah berkas RAF adalah foto digital yang diambil oleh kamera digital Fuji"
 
 #. Supported file extension ".raw" and mimetype "image/raw" description
 msgctxt "#30118"
 msgid "Raw Image Data File - Image generated by digital cameras such as Panasonic, Leica, and Casio."
-msgstr ""
+msgstr "Berkas Data Gambar Raw - Gambar yang dibuat oleh kamera digital seperti Panasonic, Leica, dan Casio."
 
 #. Supported file extension ".rw2" and mimetype "image/rw2" description
 msgctxt "#30119"
 msgid "Panasonic RAW Image - An RW2 file is a raw camera image created by a Panasonic LUMIX digital camera."
-msgstr ""
+msgstr "Gambar RAW Panasonic - Sebuah berkas RW2 adalah gambar kamera mentah yang dibuat oleh kamera digital Panasonic LUMIX."
 
 #. Supported file extension ".srw" and mimetype "image/srw" description
 msgctxt "#30120"
 msgid "Samsung RAW Image - Digital photo taken by a Samsung digital camera."
-msgstr ""
+msgstr "Gambar RAW Samsung - Foto digital yang diambil oleh kamera digital Samsung."
 
 #. Supported file extension ".srw" and mimetype "image/srw" description
 msgctxt "#30121"
 msgid "SIGMA X3F Camera RAW File - An X3F file is a RAW file saved in SIGMA's X3F format."
-msgstr ""
+msgstr "Berkas RAW Kamera SIGMA X3F - Sebuah berkas X3F adalah berkas RAW yang disimpan dalam format SIGMA X3F."
