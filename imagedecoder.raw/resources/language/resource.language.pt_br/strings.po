@@ -5,17 +5,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Addons\n"
-"Report-Msgid-Bugs-To: https://github.com/xbmc/imagedecoder.raw/issues/\n"
+"Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-12-07 23:13+0000\n"
-"Last-Translator: Fabio <fabioihle+kodi@alunos.utfpr.edu.br>\n"
+"PO-Revision-Date: 2024-05-19 04:25+0000\n"
+"Last-Translator: Havok Dan <havokdan@yahoo.com.br>\n"
 "Language-Team: Portuguese (Brazil) <https://kodi.weblate.cloud/projects/kodi-add-ons-image-decoders/imagedecoder-raw/pt_br/>\n"
 "Language: pt_br\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.9.1\n"
+"X-Generator: Weblate 5.5.4\n"
 
 msgctxt "Addon Summary"
 msgid "Reading of RAW digicam images"
@@ -28,42 +28,42 @@ msgstr "Add-on baseado na biblioteca LibRaw para leitura de arquivos RAW proveni
 #. Supported file extension ".3fr" and mimetype "image/3fr" description
 msgctxt "#30100"
 msgid "Hasselblad 3F RAW Image - Digital photo captured by a Hasselblad digital camera."
-msgstr ""
+msgstr "Imagem Hasselblad 3F RAW - Foto digital capturada por uma câmera digital Hasselblad."
 
 #. Supported file extension ".arw" and mimetype "image/arw" description
 msgctxt "#30101"
 msgid "Sony Alpha Raw Digital Camera Image - An ARW file is a digital photograph captured by various Sony digital cameras."
-msgstr ""
+msgstr "Imagem de câmera digital Sony Alpha Raw - Um arquivo ARW é uma fotografia digital capturada por várias câmeras digitais Sony."
 
 #. Supported file extension ".cr2" and mimetype "image/cr2" description
 msgctxt "#30102"
 msgid "Canon Raw Image File - A CR2 file is a raw camera image created by various Canon digital cameras."
-msgstr ""
+msgstr "Arquivo de imagem Canon Raw - Um arquivo CR2 é uma imagem de câmera raw criada por várias câmeras digitais Canon."
 
 #. Supported file extension ".crw" and mimetype "image/crw" description
 msgctxt "#30103"
 msgid "Canon Raw CIFF Image File - Uncompressed and unprocessed Camera RAW image file from a Canon digital camera."
-msgstr ""
+msgstr "Arquivo de imagem Canon Raw CIFF - Arquivo de imagem Camera RAW não compactado e não processado de uma câmera digital Canon."
 
 #. Supported file extension ".dcr" and mimetype "image/dcr" description
 msgctxt "#30104"
 msgid "Kodak Digital Camera RAW Image - DCR file is a digital photograph saved in the Kodak Digital Camera RAW format."
-msgstr ""
+msgstr "Imagem RAW da câmera digital Kodak - arquivo DCR é uma fotografia digital salva no formato RAW da câmera digital Kodak."
 
 #. Supported file extension ".dng" and mimetype "image/dng" description
 msgctxt "#30105"
 msgid "Digital Negative Image File - A DNG file is a RAW camera image saved in the Digital Negative (DNG) format."
-msgstr ""
+msgstr "Arquivo de imagem negativa digital - Um arquivo DNG é uma imagem de câmera RAW salva no formato Negativo Digital (DNG)."
 
 #. Supported file extension ".erf" and mimetype "image/erf" description
 msgctxt "#30106"
 msgid "Epson RAW File - Camera RAW file captured by an Epson digital camera."
-msgstr ""
+msgstr "Arquivo Epson RAW - Arquivo RAW da câmera capturado por uma câmera digital Epson."
 
 #. Supported file extension ".kdc" and mimetype "image/kdc" description
 msgctxt "#30107"
 msgid "Kodak Photo-Enhancer File - Bitmap image format used by several Kodak digital cameras."
-msgstr ""
+msgstr "Arquivo Kodak Photo-Enhancer - formato de imagem bitmap usado por diversas câmeras digitais Kodak."
 
 #. Supported file extension ".mdc" and mimetype "image/mdc" description
 msgctxt "#30108"
