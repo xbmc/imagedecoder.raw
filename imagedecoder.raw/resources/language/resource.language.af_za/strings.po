@@ -5,131 +5,132 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Addons\n"
-"Report-Msgid-Bugs-To: https://github.com/xbmc/imagedecoder.raw/issues/\n"
+"Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-01-05 23:25+0000\n"
+"Last-Translator: Heiko Berner <berner.h@gmail.com>\n"
+"Language-Team: Afrikaans (South Africa) <https://kodi.weblate.cloud/projects/kodi-add-ons-image-decoders/imagedecoder-raw/af_za/>\n"
 "Language: af_za\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.9.2\n"
 
 msgctxt "Addon Summary"
 msgid "Reading of RAW digicam images"
-msgstr ""
+msgstr "Lees van RAW digitale kamera beelde"
 
 msgctxt "Addon Description"
 msgid "Addon based on LibRaw for reading RAW files obtained from digital photo cameras (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR and others; virtually all RAW formats are supported)."
-msgstr ""
+msgstr "Byvoegsel gebaseer op LibRaw vir die lees van RAW lêers verkry vanaf digitale foto kameras (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR en ander; virtueel alle RAW formate word ondersteun)."
 
 #. Supported file extension ".3fr" and mimetype "image/3fr" description
 msgctxt "#30100"
 msgid "Hasselblad 3F RAW Image - Digital photo captured by a Hasselblad digital camera."
-msgstr ""
+msgstr "Hasselblad 3F RAW Image - Digitale foto gevang deur 'n Hasselblad digitale kamera."
 
 #. Supported file extension ".arw" and mimetype "image/arw" description
 msgctxt "#30101"
 msgid "Sony Alpha Raw Digital Camera Image - An ARW file is a digital photograph captured by various Sony digital cameras."
-msgstr ""
+msgstr "Sony Alpha Raw Digital Camera Image - 'n ARW lêer is 'n digitale foto gevang deur verskeie Sony digitale kameras."
 
 #. Supported file extension ".cr2" and mimetype "image/cr2" description
 msgctxt "#30102"
 msgid "Canon Raw Image File - A CR2 file is a raw camera image created by various Canon digital cameras."
-msgstr ""
+msgstr "Canon Raw Image File - 'n CR2 lêer is 'n raw kamera beeld geskep deur verskeie Canon digitale kameras."
 
 #. Supported file extension ".crw" and mimetype "image/crw" description
 msgctxt "#30103"
 msgid "Canon Raw CIFF Image File - Uncompressed and unprocessed Camera RAW image file from a Canon digital camera."
-msgstr ""
+msgstr "Canon Raw CIFF Image File - Onsaamgepersde en ongeprosesseerde kamera RAW beeld lêer vanaf 'n Canon digitale kamera."
 
 #. Supported file extension ".dcr" and mimetype "image/dcr" description
 msgctxt "#30104"
 msgid "Kodak Digital Camera RAW Image - DCR file is a digital photograph saved in the Kodak Digital Camera RAW format."
-msgstr ""
+msgstr "Kodak Digital Camera RAW Image - DCR lêer is 'n digitale foto gestoor in die Kodak Digital Camera RAW formaat."
 
 #. Supported file extension ".dng" and mimetype "image/dng" description
 msgctxt "#30105"
 msgid "Digital Negative Image File - A DNG file is a RAW camera image saved in the Digital Negative (DNG) format."
-msgstr ""
+msgstr "Digital Negative Image File - 'n DNG lêer is 'n RAW kamera beeld gestoor in die Digital Negative (DNG) formaat."
 
 #. Supported file extension ".erf" and mimetype "image/erf" description
 msgctxt "#30106"
 msgid "Epson RAW File - Camera RAW file captured by an Epson digital camera."
-msgstr ""
+msgstr "Epson RAW File - Kamera RAW lêer gevang deur 'n Epson digitale kamera."
 
 #. Supported file extension ".kdc" and mimetype "image/kdc" description
 msgctxt "#30107"
 msgid "Kodak Photo-Enhancer File - Bitmap image format used by several Kodak digital cameras."
-msgstr ""
+msgstr "Kodak Photo-Enhancer File - Bitmap beeld formaat gebruik deur verskeie Kodak digitale kameras."
 
 #. Supported file extension ".mdc" and mimetype "image/mdc" description
 msgctxt "#30108"
 msgid "Minolta Camera Raw Image - An MDC file is a camera raw image created by a Minolta digital camera."
-msgstr ""
+msgstr "Minolta Camera Raw Image - 'n MDC lêer is 'n kamera raw beeld geskep deur 'n Minolta digitale kamera."
 
 #. Supported file extension ".mef" and mimetype "image/mef" description
 msgctxt "#30109"
 msgid "Mamiya RAW Image - Camera RAW image captured by a Mamiya digital camera."
-msgstr ""
+msgstr "Mamiya RAW Image - Kamera RAW beeld gevang deur 'n Mamiya digitale kamera."
 
 #. Supported file extension ".mos" and mimetype "image/mos" description
 msgctxt "#30110"
 msgid "Leaf Camera RAW File - RAW image captured by several different types of digital cameras."
-msgstr ""
+msgstr "Leaf Camera RAW File - RAW beeld gevang deur verskeie verskillende tipes digitale kameras."
 
 #. Supported file extension ".mrw" and mimetype "image/mrw" description
 msgctxt "#30111"
 msgid "Minolta Raw Image File - Raw image format used by Minolta Dimage digital cameras."
-msgstr ""
+msgstr "Minolta Raw Image File - Raw beeld formaat gebruik deur Minolta Dimage digitale kameras."
 
 #. Supported file extension ".nef" and mimetype "image/nef" description
 msgctxt "#30112"
 msgid "Nikon Electronic Format RAW Image - An NEF file is a raw photo captured by a Nikon digital camera."
-msgstr ""
+msgstr "Nikon Electronic Format RAW Image - 'n NEF lêer is 'n raw foto gevang deur 'n Nikon digitale kamera."
 
 #. Supported file extension ".nrw" and mimetype "image/nrw" description
 msgctxt "#30113"
 msgid "Nikon Raw Image File - Raw image file produced by high-end Nikon COOLPIX and digital SLR cameras."
-msgstr ""
+msgstr "Nikon Raw Image File - Raw beeld lêer geproduseer deur 'n hoë-end Nikon COOLPIX en digitale SLR kameras."
 
 #. Supported file extension ".orf" and mimetype "image/orf" description
 msgctxt "#30114"
 msgid "Olympus RAW File - An ORF file is a RAW photo taken with an Olympus digital camera."
-msgstr ""
+msgstr "Olympus RAW File - 'n ORF lêer is 'n RAW foto geneem met 'n Olympus digitale kamera."
 
 #. Supported file extension ".pef" and mimetype "image/pef" description
 msgctxt "#30115"
 msgid "Pentax Electronic File - A PEF file is a raw camera image created by Pentax digital cameras."
-msgstr ""
+msgstr "Pentax Electronic File - 'n PEF lêer is 'n raw kamera beeld geskep deur Pentax digitale kameras."
 
 #. Supported file extension ".ppm" and mimetype "image/x-portable-pixmap" description
 msgctxt "#30116"
 msgid "Portable Pixmap Image File - PPM file is a 24-bit color image formatted using a text format."
-msgstr ""
+msgstr "Portable Pixmap Image File - PPM lêer is 'n 24-bis kleur beeld, geformateer met die gebruik van 'n teks formaat."
 
 #. Supported file extension ".raf" and mimetype "image/raf" description
 msgctxt "#30117"
 msgid "Fuji RAW Image File - An RAF file is a digital photograph captured by Fuji digital cameras."
-msgstr ""
+msgstr "Fuji RAW Image File - 'n RAF lêer is 'n digitale foto gevang deur Fuji digitale kameras."
 
 #. Supported file extension ".raw" and mimetype "image/raw" description
 msgctxt "#30118"
 msgid "Raw Image Data File - Image generated by digital cameras such as Panasonic, Leica, and Casio."
-msgstr ""
+msgstr "Raw Image Data File - Beeld gegenereer deur digitale kameras soos Panasonic, Leica, en Casio."
 
 #. Supported file extension ".rw2" and mimetype "image/rw2" description
 msgctxt "#30119"
 msgid "Panasonic RAW Image - An RW2 file is a raw camera image created by a Panasonic LUMIX digital camera."
-msgstr ""
+msgstr "Panasonic RAW Image - 'n RW2 lêer is 'n raw kamera beeld geskep deur 'n Panasonic LUMIX digitale kamera."
 
 #. Supported file extension ".srw" and mimetype "image/srw" description
 msgctxt "#30120"
 msgid "Samsung RAW Image - Digital photo taken by a Samsung digital camera."
-msgstr ""
+msgstr "Samsung RAW Image - Digitale foto geneem deur 'n Samsung digitale kamera."
 
 #. Supported file extension ".srw" and mimetype "image/srw" description
 msgctxt "#30121"
 msgid "SIGMA X3F Camera RAW File - An X3F file is a RAW file saved in SIGMA's X3F format."
-msgstr ""
+msgstr "SIGMA X3F Camera RAW File - 'n X3F lêer is 'n RAW lêer gestoor in SIGMA se X3F formaat."
