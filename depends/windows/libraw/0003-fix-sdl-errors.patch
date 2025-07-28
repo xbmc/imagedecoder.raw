@@ -1,6 +1,6 @@
 --- a/src/decoders/crx.cpp
 +++ b/src/decoders/crx.cpp
-@@ -347,7 +347,7 @@ libraw_inline void crxDecodeSymbolL1(CrxBandParam *param,
+@@ -347,7 +347,7 @@
                (bitCode << param->kParam);
  
    // add converted (+/-) error code to predicted value
@@ -9,7 +9,7 @@
  
    // for not end of the line - use one symbol ahead to estimate next K
    if (notEOL)
-@@ -456,7 +456,7 @@ libraw_inline void crxDecodeSymbolL1Rounded(CrxBandParam *param,
+@@ -456,7 +456,7 @@
    else if (param->kParam)
      bitCode = crxBitstreamGetBits(&param->bitStream, param->kParam) |
                (bitCode << param->kParam);
@@ -18,7 +18,7 @@
    param->lineBuf1[1] = param->roundedBitsMask * 2 * code + (code >> 31) + sym;
  
    if (doCode)
-@@ -576,7 +576,7 @@ int crxDecodeLineNoRefPrevLine(CrxBandParam *param)
+@@ -576,7 +576,7 @@
        else if (param->kParam)
          bitCode = crxBitstreamGetBits(&param->bitStream, param->kParam) |
                    (bitCode << param->kParam);
@@ -27,7 +27,7 @@
        param->kParam = crxPredictKParameter(param->kParam, bitCode);
        if (param->lineBuf2[i + 1] - param->kParam <= 1)
        {
-@@ -638,7 +638,7 @@ int crxDecodeLineNoRefPrevLine(CrxBandParam *param)
+@@ -638,7 +638,7 @@
            else if (param->kParam)
              bitCode = crxBitstreamGetBits(&param->bitStream, param->kParam) |
                        (bitCode << param->kParam);
@@ -36,7 +36,7 @@
            param->kParam = crxPredictKParameter(param->kParam, bitCode, 15);
            param->lineBuf2[i] = param->kParam;
          }
-@@ -652,7 +652,7 @@ int crxDecodeLineNoRefPrevLine(CrxBandParam *param)
+@@ -652,7 +652,7 @@
          else if (param->kParam)
            bitCode = crxBitstreamGetBits(&param->bitStream, param->kParam) |
                      (bitCode << param->kParam);
@@ -45,7 +45,7 @@
          param->kParam = crxPredictKParameter(param->kParam, bitCode);
          if (param->lineBuf2[i + 1] - param->kParam <= 1)
          {
-@@ -743,7 +743,7 @@ int crxDecodeTopLine(CrxBandParam *param)
+@@ -743,7 +743,7 @@
      else if (param->kParam)
        bitCode = crxBitstreamGetBits(&param->bitStream, param->kParam) |
                  (bitCode << param->kParam);
@@ -54,7 +54,7 @@
      param->kParam = crxPredictKParameter(param->kParam, bitCode, 15);
      ++param->lineBuf1;
    }
-@@ -757,7 +757,7 @@ int crxDecodeTopLine(CrxBandParam *param)
+@@ -757,7 +757,7 @@
      else if (param->kParam)
        bitCode = crxBitstreamGetBits(&param->bitStream, param->kParam) |
                  (bitCode << param->kParam);
@@ -63,7 +63,7 @@
      param->kParam = crxPredictKParameter(param->kParam, bitCode, 15);
      ++param->lineBuf1;
    }
-@@ -830,7 +830,7 @@ int crxDecodeTopLineRounded(CrxBandParam *param)
+@@ -830,7 +830,7 @@
        bitCode = crxBitstreamGetBits(&param->bitStream, param->kParam) |
                  (bitCode << param->kParam);
  
@@ -72,7 +72,7 @@
      param->lineBuf1[1] += param->roundedBitsMask * 2 * sVal + (sVal >> 31);
      param->kParam = crxPredictKParameter(param->kParam, bitCode, 15);
      ++param->lineBuf1;
-@@ -844,7 +844,7 @@ int crxDecodeTopLineRounded(CrxBandParam *param)
+@@ -844,7 +844,7 @@
      else if (param->kParam)
        bitCode = crxBitstreamGetBits(&param->bitStream, param->kParam) |
                  (bitCode << param->kParam);
@@ -81,7 +81,7 @@
      param->lineBuf1[1] += param->roundedBitsMask * 2 * sVal + (sVal >> 31);
      param->kParam = crxPredictKParameter(param->kParam, bitCode, 15);
      ++param->lineBuf1;
-@@ -870,7 +870,7 @@ int crxDecodeTopLineNoRefPrevLine(CrxBandParam *param)
+@@ -870,7 +870,7 @@
        else if (param->kParam)
          bitCode = crxBitstreamGetBits(&param->bitStream, param->kParam) |
                    (bitCode << param->kParam);
@@ -90,7 +90,7 @@
        param->kParam = crxPredictKParameter(param->kParam, bitCode, 15);
      }
      else
-@@ -922,7 +922,7 @@ int crxDecodeTopLineNoRefPrevLine(CrxBandParam *param)
+@@ -922,7 +922,7 @@
        else if (param->kParam)
          bitCode = crxBitstreamGetBits(&param->bitStream, param->kParam) |
                    (bitCode << param->kParam);
@@ -99,7 +99,7 @@
        param->kParam = crxPredictKParameter(param->kParam, bitCode, 15);
      }
      param->lineBuf2[0] = param->kParam;
-@@ -938,7 +938,7 @@ int crxDecodeTopLineNoRefPrevLine(CrxBandParam *param)
+@@ -938,7 +938,7 @@
      else if (param->kParam)
        bitCode = crxBitstreamGetBits(&param->bitStream, param->kParam) |
                  (bitCode << param->kParam);
@@ -108,7 +108,7 @@
      param->kParam = crxPredictKParameter(param->kParam, bitCode, 15);
      param->lineBuf2[0] = param->kParam;
      ++param->lineBuf1;
-@@ -1085,7 +1085,7 @@ int crxDecodeLineWithIQuantization(CrxSubband *subband)
+@@ -1085,7 +1085,7 @@
            (bitCode << subband->paramK);
  
      subband->quantValue +=
