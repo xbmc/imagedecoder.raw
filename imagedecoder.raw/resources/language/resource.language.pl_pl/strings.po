@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: KODI Addons\n"
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2023-02-27 20:15+0000\n"
+"PO-Revision-Date: 2025-08-04 09:29+0000\n"
 "Last-Translator: Marek Adamski <fevbew@wp.pl>\n"
 "Language-Team: Polish <https://kodi.weblate.cloud/projects/kodi-add-ons-image-decoders/imagedecoder-raw/pl_pl/>\n"
 "Language: pl_pl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.15.2\n"
+"X-Generator: Weblate 5.12.2\n"
 
 msgctxt "Addon Summary"
 msgid "Reading of RAW digicam images"
@@ -28,109 +28,109 @@ msgstr "Dodatek oparty na LibRaw do odczytu plików RAW uzyskanych z cyfrowych a
 #. Supported file extension ".3fr" and mimetype "image/3fr" description
 msgctxt "#30100"
 msgid "Hasselblad 3F RAW Image - Digital photo captured by a Hasselblad digital camera."
-msgstr "Obraz RAW Hasselblad 3F - zdjęcie cyfrowe zrobione aparatem cyfrowym Hasselblad."
+msgstr "Obraz RAW aparatu Hasselblad 3F - zdjęcie cyfrowe zrobione aparatem cyfrowym Hasselblad."
 
 #. Supported file extension ".arw" and mimetype "image/arw" description
 msgctxt "#30101"
 msgid "Sony Alpha Raw Digital Camera Image - An ARW file is a digital photograph captured by various Sony digital cameras."
-msgstr ""
+msgstr "Obraz RAW aparatu Sony Alpha - plik ARW to fotografia cyfrowa zarejestrowana za pomocą różnych aparatów cyfrowych Sony."
 
 #. Supported file extension ".cr2" and mimetype "image/cr2" description
 msgctxt "#30102"
 msgid "Canon Raw Image File - A CR2 file is a raw camera image created by various Canon digital cameras."
-msgstr ""
+msgstr "Obraz RAW aparatu Canon - plik CR2 to obraz w formacie RAW utworzony za pomocą różnych aparatów cyfrowych Canon."
 
 #. Supported file extension ".crw" and mimetype "image/crw" description
 msgctxt "#30103"
 msgid "Canon Raw CIFF Image File - Uncompressed and unprocessed Camera RAW image file from a Canon digital camera."
-msgstr ""
+msgstr "Obraz RAW CiFF aparatu Canon - nieskompresowany i nieprzetworzony plik obrazu RAW z aparatu cyfrowego Canon."
 
 #. Supported file extension ".dcr" and mimetype "image/dcr" description
 msgctxt "#30104"
 msgid "Kodak Digital Camera RAW Image - DCR file is a digital photograph saved in the Kodak Digital Camera RAW format."
-msgstr ""
+msgstr "Obraz RAW aparatu Kodak - plik DCR to fotografia cyfrowa zapisana w formacie RAW z aparatu cyfrowego Kodak."
 
 #. Supported file extension ".dng" and mimetype "image/dng" description
 msgctxt "#30105"
 msgid "Digital Negative Image File - A DNG file is a RAW camera image saved in the Digital Negative (DNG) format."
-msgstr ""
+msgstr "Obraz Digital Negative - plik DNG to obraz RAW z aparatu zapisany w formacie Digital Negative (DNG)."
 
 #. Supported file extension ".erf" and mimetype "image/erf" description
 msgctxt "#30106"
 msgid "Epson RAW File - Camera RAW file captured by an Epson digital camera."
-msgstr ""
+msgstr "Obraz RAW aparatu Epson - plik RAW zarejestrowany przez cyfrowy aparat fotograficzny Epson."
 
 #. Supported file extension ".kdc" and mimetype "image/kdc" description
 msgctxt "#30107"
 msgid "Kodak Photo-Enhancer File - Bitmap image format used by several Kodak digital cameras."
-msgstr ""
+msgstr "Obraz Photo-Enhancer aparatu Kodak - format obrazu bitmapowego używany w wielu aparatach cyfrowych Kodak."
 
 #. Supported file extension ".mdc" and mimetype "image/mdc" description
 msgctxt "#30108"
 msgid "Minolta Camera Raw Image - An MDC file is a camera raw image created by a Minolta digital camera."
-msgstr ""
+msgstr "Obraz RAW aparatu Minolta - plik MDC to obraz w formacie RAW utworzony w aparacie cyfrowym Minolta."
 
 #. Supported file extension ".mef" and mimetype "image/mef" description
 msgctxt "#30109"
 msgid "Mamiya RAW Image - Camera RAW image captured by a Mamiya digital camera."
-msgstr ""
+msgstr "Obraz RAW aparatu Mamiya - obraz RAW z aparatu cyfrowego Mamiya."
 
 #. Supported file extension ".mos" and mimetype "image/mos" description
 msgctxt "#30110"
 msgid "Leaf Camera RAW File - RAW image captured by several different types of digital cameras."
-msgstr ""
+msgstr "Obraz RAW aparatu Leaf - obraz RAW zarejestrowany przez kilka różnych typów aparatów cyfrowych."
 
 #. Supported file extension ".mrw" and mimetype "image/mrw" description
 msgctxt "#30111"
 msgid "Minolta Raw Image File - Raw image format used by Minolta Dimage digital cameras."
-msgstr ""
+msgstr "Obraz RAW aparatu Minolta - format obrazu RAW używany w aparatach cyfrowych Minolta DiMAGE."
 
 #. Supported file extension ".nef" and mimetype "image/nef" description
 msgctxt "#30112"
 msgid "Nikon Electronic Format RAW Image - An NEF file is a raw photo captured by a Nikon digital camera."
-msgstr ""
+msgstr "Obraz RAW NEF aparatu Nikon - plik Nikon Electronic Format (NEF) to zdjęcie w formacie RAW zarejestrowane za pomocą cyfrowego aparatu Nikon."
 
 #. Supported file extension ".nrw" and mimetype "image/nrw" description
 msgctxt "#30113"
 msgid "Nikon Raw Image File - Raw image file produced by high-end Nikon COOLPIX and digital SLR cameras."
-msgstr ""
+msgstr "Obraz RAW aparatu Nikon - plik obrazu RAW wygenerowany przez zaawansowane aparaty Nikon COOLPIX i cyfrowe lustrzanki."
 
 #. Supported file extension ".orf" and mimetype "image/orf" description
 msgctxt "#30114"
 msgid "Olympus RAW File - An ORF file is a RAW photo taken with an Olympus digital camera."
-msgstr ""
+msgstr "Obraz RAW aparatu Olympus - plik ORF to zdjęcie w formacie RAW wykonane cyfrowym aparatem Olympus."
 
 #. Supported file extension ".pef" and mimetype "image/pef" description
 msgctxt "#30115"
 msgid "Pentax Electronic File - A PEF file is a raw camera image created by Pentax digital cameras."
-msgstr ""
+msgstr "Obraz PEF - plik Pentax Electronic File (PEF) to surowy obraz z aparatu utworzony za pomocą cyfrowych aparatów Pentax."
 
 #. Supported file extension ".ppm" and mimetype "image/x-portable-pixmap" description
 msgctxt "#30116"
 msgid "Portable Pixmap Image File - PPM file is a 24-bit color image formatted using a text format."
-msgstr ""
+msgstr "Obraz Portable Pixmap Format - plik PPM to 24-bitowy obraz kolorowy sformatowany w formacie tekstowym."
 
 #. Supported file extension ".raf" and mimetype "image/raf" description
 msgctxt "#30117"
 msgid "Fuji RAW Image File - An RAF file is a digital photograph captured by Fuji digital cameras."
-msgstr ""
+msgstr "Obraz RAW aparatu Fuji - plik RAF to cyfrowe zdjęcie wykonane za pomocą cyfrowych aparatów Fuji."
 
 #. Supported file extension ".raw" and mimetype "image/raw" description
 msgctxt "#30118"
 msgid "Raw Image Data File - Image generated by digital cameras such as Panasonic, Leica, and Casio."
-msgstr ""
+msgstr "Obraz Raw Image Data - obraz wygenerowany przez aparaty cyfrowe, takie jak Panasonic, Leica i Casio."
 
 #. Supported file extension ".rw2" and mimetype "image/rw2" description
 msgctxt "#30119"
 msgid "Panasonic RAW Image - An RW2 file is a raw camera image created by a Panasonic LUMIX digital camera."
-msgstr ""
+msgstr "Obraz RAW aparatu Panasonic - plik RW2 to surowy obraz utworzony przy użyciu cyfrowego aparatu Panasonic LUMIX."
 
 #. Supported file extension ".srw" and mimetype "image/srw" description
 msgctxt "#30120"
 msgid "Samsung RAW Image - Digital photo taken by a Samsung digital camera."
-msgstr ""
+msgstr "Obraz RAW aparatu Samsung - zdjęcie cyfrowe wykonane cyfrowym aparatem Samsung."
 
 #. Supported file extension ".srw" and mimetype "image/srw" description
 msgctxt "#30121"
 msgid "SIGMA X3F Camera RAW File - An X3F file is a RAW file saved in SIGMA's X3F format."
-msgstr ""
+msgstr "Obraz RAW aparatu SIGMA X3F - plik X3F to plik RAW zapisany w formacie X3F firmy SIGMA."
