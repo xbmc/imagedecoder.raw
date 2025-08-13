@@ -1,6 +1,6 @@
 --- a/src/metadata/cr3_parser.cpp
 +++ b/src/metadata/cr3_parser.cpp
-@@ -298,7 +298,7 @@ int LibRaw::parseCR3(unsigned long long oAtomList,
+@@ -298,7 +298,7 @@
          AtomType = 1;
        }
        else
@@ -11,7 +11,7 @@
      {
 --- a/src/metadata/makernotes.cpp
 +++ b/src/metadata/makernotes.cpp
-@@ -96,7 +96,7 @@ void LibRaw::parse_makernote_0xc634(int base, int uptag, unsigned dng_writer)
+@@ -96,7 +96,7 @@
  
    unsigned entries, tag, type, len, save, c;
  
@@ -20,7 +20,7 @@
    unsigned lenCanonCameraInfo = 0;
    unsigned typeCanonCameraInfo = 0;
  
-@@ -420,7 +420,7 @@ void LibRaw::parse_makernote(int base, int uptag)
+@@ -420,7 +420,7 @@
    unsigned i, wb[4] = {0, 0, 0, 0};
    short morder, sorder = order;
  
@@ -31,7 +31,7 @@
    imCanon.wbi = 0;
 --- a/src/metadata/misc_parsers.cpp
 +++ b/src/metadata/misc_parsers.cpp
-@@ -71,7 +71,7 @@ int LibRaw::minolta_z2()
+@@ -71,7 +71,7 @@
    int i, nz;
    char tail[424];
  
@@ -40,7 +40,7 @@
    fread(tail, 1, sizeof tail, ifp);
    for (nz = i = 0; i < int(sizeof tail); i++)
      if (tail[i])
-@@ -102,7 +102,7 @@ void LibRaw::parse_redcine()
+@@ -102,7 +102,7 @@
    width = get4();
    height = get4();
    fseek(ifp, 0, SEEK_END);
@@ -51,7 +51,7 @@
      fseek(ifp, 0, SEEK_SET);
 --- a/src/metadata/nikon.cpp
 +++ b/src/metadata/nikon.cpp
-@@ -238,7 +238,7 @@ void LibRaw::parseNikonMakernote(int base, int uptag, unsigned dng_writer)
+@@ -238,7 +238,7 @@
    unsigned offset = 0, entries, tag, type, len, save;
  
    unsigned c, i;
@@ -62,7 +62,7 @@
    uchar ci, cj, ck;
 --- a/src/metadata/pentax.cpp
 +++ b/src/metadata/pentax.cpp
-@@ -133,7 +133,7 @@ void LibRaw::PentaxISO(ushort c)
+@@ -133,7 +133,7 @@
  void LibRaw::PentaxLensInfo(unsigned long long id, unsigned len) // tag 0x0207
  {
    ushort iLensData = 0;
@@ -73,7 +73,7 @@
    if ((id < PentaxID_K100D) ||
 --- a/src/metadata/sony.cpp
 +++ b/src/metadata/sony.cpp
-@@ -982,7 +982,7 @@ void LibRaw::parseSonyMakernotes(
+@@ -982,7 +982,7 @@
  {
  
    ushort lid, a, c, d;

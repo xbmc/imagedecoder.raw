@@ -1,6 +1,6 @@
 --- a/src/libraw_datastream.cpp
 +++ b/src/libraw_datastream.cpp
-@@ -644,6 +644,27 @@ void *LibRaw_bigfile_datastream::make_jas_stream()
+@@ -644,6 +644,27 @@
  // == LibRaw_windows_datastream
  #ifdef LIBRAW_WIN32_CALLS
  

@@ -30,7 +30,7 @@
      endif()
    endif()
  endif()
-@@ -1416,7 +1416,7 @@ if(WITH_TURBOJPEG)
+@@ -1416,7 +1416,7 @@
      endif()
    endif()
    if(ENABLE_STATIC)

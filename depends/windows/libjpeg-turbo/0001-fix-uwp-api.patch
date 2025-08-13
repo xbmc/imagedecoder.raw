@@ -1,8 +1,6 @@
-diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 8f5f920..f428849 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -152,6 +152,9 @@ if(MSVC)
+@@ -150,6 +150,9 @@
      endforeach()
    endif()
    add_definitions(-W3 -wd4996)
@@ -12,11 +10,9 @@ index 8f5f920..f428849 100644
  endif()
  
  # Detect whether compiler is 64-bit
-diff --git a/tjutil.c b/tjutil.c
-index 6618d15..02f57c7 100644
 --- a/tjutil.c
 +++ b/tjutil.c
-@@ -43,7 +43,7 @@ double gettime(void)
+@@ -43,7 +43,7 @@
  {
  	LARGE_INTEGER t;
  	if(f<0.0) f=getfreq();
@@ -25,11 +21,9 @@ index 6618d15..02f57c7 100644
  	else
  	{
  		QueryPerformanceCounter(&t);
-diff --git a/turbojpeg.c b/turbojpeg.c
-index c9bc619..20154fc 100644
 --- a/turbojpeg.c
 +++ b/turbojpeg.c
-@@ -797,9 +797,11 @@ DLLEXPORT int DLLCALL tjCompress2(tjhandle handle, const unsigned char *srcBuf,
+@@ -794,9 +794,11 @@
  	cinfo->image_width=width;
  	cinfo->image_height=height;
  
@@ -41,7 +35,7 @@ index c9bc619..20154fc 100644
  
  	if(flags&TJFLAG_NOREALLOC)
  	{
-@@ -914,9 +916,11 @@ DLLEXPORT int DLLCALL tjEncodeYUVPlanes(tjhandle handle,
+@@ -913,9 +915,11 @@
  	cinfo->image_width=width;
  	cinfo->image_height=height;
  
@@ -53,7 +47,7 @@ index c9bc619..20154fc 100644
  
  	if(setCompDefaults(cinfo, pixelFormat, subsamp, -1, flags)==-1) return -1;
  
-@@ -1115,9 +1119,11 @@ DLLEXPORT int DLLCALL tjCompressFromYUVPlanes(tjhandle handle,
+@@ -1107,9 +1111,11 @@
  	cinfo->image_width=width;
  	cinfo->image_height=height;
  
@@ -65,7 +59,7 @@ index c9bc619..20154fc 100644
  
  	if(flags&TJFLAG_NOREALLOC)
  	{
-@@ -1397,9 +1403,11 @@ DLLEXPORT int DLLCALL tjDecompress2(tjhandle handle,
+@@ -1382,9 +1388,11 @@
  		|| height<0 || pixelFormat<0 || pixelFormat>=TJ_NUMPF)
  		_throw("tjDecompress2(): Invalid argument");
  
@@ -77,7 +71,7 @@ index c9bc619..20154fc 100644
  
  	if(setjmp(this->jerr.setjmp_buffer))
  	{
-@@ -1600,9 +1608,11 @@ DLLEXPORT int DLLCALL tjDecodeYUVPlanes(tjhandle handle,
+@@ -1579,9 +1587,11 @@
  	dinfo->image_width=width;
  	dinfo->image_height=height;
  
@@ -89,7 +83,7 @@ index c9bc619..20154fc 100644
  
  	if(setDecodeDefaults(dinfo, pixelFormat, subsamp, flags)==-1)
  	{
-@@ -1782,9 +1792,11 @@ DLLEXPORT int DLLCALL tjDecompressToYUVPlanes(tjhandle handle,
+@@ -1754,9 +1764,11 @@
  		|| height<0)
  		_throw("tjDecompressToYUVPlanes(): Invalid argument");
  
@@ -101,7 +95,7 @@ index c9bc619..20154fc 100644
  
  	if(setjmp(this->jerr.setjmp_buffer))
  	{
-@@ -2048,9 +2060,11 @@ DLLEXPORT int DLLCALL tjTransform(tjhandle handle,
+@@ -2013,9 +2025,11 @@
  		|| t==NULL || flags<0)
  		_throw("tjTransform(): Invalid argument");
  
@@ -111,10 +105,8 @@ index c9bc619..20154fc 100644
  	else if(flags&TJFLAG_FORCESSE2) putenv("JSIMD_FORCESSE2=1");
 +#endif // !WITH_SIMD
  
- 	if((xinfo=(jpeg_transform_info *)malloc(sizeof(jpeg_transform_info)*n))
- 		==NULL)
-diff --git a/win/jconfig.h.in b/win/jconfig.h.in
-index 9d35121..4ba1dfa 100644
+ 	if(setjmp(this->jerr.setjmp_buffer))
+ 	{
 --- a/win/jconfig.h.in
 +++ b/win/jconfig.h.in
 @@ -7,6 +7,7 @@
@@ -125,6 +117,3 @@ index 9d35121..4ba1dfa 100644
  
  /*
   * Define BITS_IN_JSAMPLE as either
--- 
-2.10.2.windows.1
-
