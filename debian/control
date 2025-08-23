@@ -2,7 +2,7 @@ Source: kodi-imagedecoder-raw
 Priority: extra
 Maintainer: Nobody <nobody@kodi.tv>
 Build-Depends: debhelper (>= 9.0.0), cmake,
-               kodi-addon-dev, libraw-dev, libturbojpeg0-dev
+               kodi-addon-dev, libraw-dev
 Standards-Version: 4.1.2
 Section: libs
 Homepage: https://kodi.tv

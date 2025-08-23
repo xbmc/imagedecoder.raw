@@ -18,4 +18,10 @@ find_library(RAW_LIBRARIES NAMES raw_r raw libraw
 include(FindPackageHandleStandardArgs)
 find_package_handle_standard_args(RAW REQUIRED_VARS RAW_INCLUDE_DIRS RAW_LIBRARIES)
 
+if(RAW_FOUND AND ${RAW_LIBRARIES} MATCHES ".+\.a$")
+  find_package(JPEG REQUIRED)
+  find_package(LCMS2 REQUIRED)
+  list(APPEND RAW_LIBRARIES ${JPEG_LIBRARIES} ${LCMS2_LIBRARIES})
+endif()
+
 mark_as_advanced(RAW_INCLUDE_DIRS RAW_LIBRARIES)
