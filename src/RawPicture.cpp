@@ -191,6 +191,19 @@ bool RawPicture::Decode(uint8_t* pixels,
   unsigned int dstPitch = pitch;
   unsigned int srcPitch = 3 * m_width;
 
+  // The loop below walks m_height rows of m_width pixels, which are the
+  // dimensions from LoadImageFromMemory() rather than the ones passed here.
+  const size_t bytesPerPixel = (format == ADDON_IMG_FMT_RGB8) ? 3 : 4;
+  if (m_height == 0 || m_width == 0 ||
+      static_cast<size_t>(m_height - 1) * dstPitch + static_cast<size_t>(m_width) * bytesPerPixel >
+          pixelBufferSize)
+  {
+    kodi::Log(ADDON_LOG_ERROR, "%s: Output buffer too small for %ux%u at pitch %u", __func__,
+              m_width, m_height, pitch);
+    libraw_dcraw_clear_mem(image);
+    return false;
+  }
+
   uint8_t* dst = pixels;
   uint8_t* src = image->data + srcPitch * m_height;
 
