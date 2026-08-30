@@ -24,6 +24,7 @@ public:
                            unsigned int& width,
                            unsigned int& height) override;
   bool Decode(uint8_t* pixels,
+              size_t pixelBufferSize,
               unsigned int width,
               unsigned int height,
               unsigned int pitch,
