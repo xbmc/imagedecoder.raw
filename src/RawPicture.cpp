@@ -175,11 +175,21 @@ bool RawPicture::LoadImageFromMemory(const std::string& mimetype,
 }
 
 bool RawPicture::Decode(uint8_t* pixels,
+                        size_t pixelBufferSize,
                         unsigned int width,
                         unsigned int height,
                         unsigned int pitch,
                         ADDON_IMG_FMT format)
 {
+  // The copy loop below writes B,G,R and only fills the fourth byte for
+  // A8R8G8B8, so that is the only format implemented here.
+  if (format != ADDON_IMG_FMT_A8R8G8B8)
+  {
+    kodi::Log(ADDON_LOG_ERROR, "%s: Unsupported target format (%d)", __func__,
+              static_cast<int>(format));
+    return false;
+  }
+
   if (!m_raw_data || m_raw_data->sizes.width == 0 || m_raw_data->sizes.height == 0)
     return false;
 
@@ -189,6 +199,19 @@ bool RawPicture::Decode(uint8_t* pixels,
 
   unsigned int dstPitch = pitch;
   unsigned int srcPitch = 3 * m_width;
+
+  // The loop below walks m_height rows of m_width pixels, which are the
+  // dimensions from LoadImageFromMemory() rather than the ones passed here.
+  const size_t bytesPerPixel = (format == ADDON_IMG_FMT_RGB8) ? 3 : 4;
+  if (m_height == 0 || m_width == 0 ||
+      static_cast<size_t>(m_height - 1) * dstPitch + static_cast<size_t>(m_width) * bytesPerPixel >
+          pixelBufferSize)
+  {
+    kodi::Log(ADDON_LOG_ERROR, "%s: Output buffer too small for %ux%u at pitch %u", __func__,
+              m_width, m_height, pitch);
+    libraw_dcraw_clear_mem(image);
+    return false;
+  }
 
   uint8_t* dst = pixels;
   uint8_t* src = image->data + srcPitch * m_height;
