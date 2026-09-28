@@ -14,6 +14,21 @@
 #
 #   LCMS2::LCMS2   - The LCMS Color Management library
 
+# Prefer upstream's exported target for static and Debug link dependencies.
+find_package(lcms2 CONFIG QUIET)
+if(TARGET lcms2::lcms2)
+  find_package(Threads REQUIRED)
+  set(LCMS2_FOUND TRUE)
+  set(LCMS2_VERSION ${lcms2_VERSION})
+  set(LCMS2_LIBRARIES lcms2::lcms2)
+  get_target_property(LCMS2_INCLUDE_DIRS lcms2::lcms2 INTERFACE_INCLUDE_DIRECTORIES)
+  set(LCMS2_DEFINITIONS -DHAVE_LCMS2=1)
+  if(NOT TARGET LCMS2::LCMS2)
+    add_library(LCMS2::LCMS2 ALIAS lcms2::lcms2)
+  endif()
+  return()
+endif()
+
 if(PKG_CONFIG_FOUND)
   pkg_check_modules(PC_LCMS2 lcms2 QUIET)
 endif()
