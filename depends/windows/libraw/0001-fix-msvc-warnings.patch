@@ -1,0 +1,22 @@
+--- a/src/metadata/cr3_parser.cpp
++++ b/src/metadata/cr3_parser.cpp
+@@ -620,7 +620,7 @@
+         AtomType = 1;
+       }
+       else
+-        fseek(ifp, -lHdr, SEEK_CUR);
++        fseek(ifp, -INT64(lHdr), SEEK_CUR);
+     }
+     else if (!strcmp(AtomNameStack, "moovuuidCCTP"))
+     {
+--- a/src/metadata/sony.cpp
++++ b/src/metadata/sony.cpp
+@@ -1161,7 +1161,7 @@
+     uchar *&table_buf_0x940e, ushort &table_buf_0x940e_len)
+ {
+   ushort lid, a, c, d;
+-  uchar *table_buf;
++  uchar *table_buf = nullptr;
+   uchar uc;
+   uchar s[2];
+   int LensDataValid = 0;

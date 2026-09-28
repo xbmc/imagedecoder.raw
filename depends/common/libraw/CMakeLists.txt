@@ -1,19 +1,27 @@
 cmake_minimum_required(VERSION 3.5)
-
 project(libraw)
 
 include(ExternalProject)
 
 externalproject_add(libraw
   SOURCE_DIR ${CMAKE_SOURCE_DIR}
-  UPDATE_COMMAND autoreconf -vif
-  CONFIGURE_COMMAND CC=${CMAKE_C_COMPILER} AR=${CMAKE_AR}
+  CONFIGURE_COMMAND ${CMAKE_COMMAND} -E env
+                    "CC=${CMAKE_C_COMPILER}"
+                    "CXX=${CMAKE_CXX_COMPILER}"
+                    "AR=${CMAKE_AR}"
+                    "CFLAGS=${CMAKE_C_FLAGS}"
+                    "CXXFLAGS=${CMAKE_CXX_FLAGS}"
+                    "CPPFLAGS=-I${OUTPUT_DIR}/include"
+                    "LDFLAGS=-L${OUTPUT_DIR}/lib ${CMAKE_EXE_LINKER_FLAGS}"
+                    "PKG_CONFIG_PATH=${OUTPUT_DIR}/lib/pkgconfig"
                     ${CMAKE_SOURCE_DIR}/configure
-                      --disable-examples
+                      --enable-static
                       --disable-shared
-                      --disable-jasper
+                      --disable-examples
                       --disable-openmp
                       --enable-jpeg
+                      --enable-zlib
+                      --enable-lcms
                       --with-pic
                       --prefix=${OUTPUT_DIR}
   INSTALL_COMMAND ""

@@ -5,6 +5,15 @@
 # RAW_INCLUDE_DIRS - the libraw include directory
 # RAW_LIBRARIES - The libraw libraries
 
+# The Windows static recipe exports all codec and color-management dependencies.
+find_package(libraw CONFIG QUIET)
+if(TARGET libraw::libraw)
+  set(RAW_FOUND TRUE)
+  set(RAW_LIBRARIES libraw::libraw)
+  get_target_property(RAW_INCLUDE_DIRS libraw::libraw INTERFACE_INCLUDE_DIRECTORIES)
+  return()
+endif()
+
 find_package(PkgConfig)
 if(PKG_CONFIG_FOUND)
   pkg_check_modules(PC_RAW libraw_r QUIET)
